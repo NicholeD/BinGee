@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2TH-tI-Chu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Page View Controller-->
+        <scene sceneID="ESb-lr-kTh">
+            <objects>
+                <viewController id="ed2-K1-DBq" customClass="HomePageViewController" customModule="BinGee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="13W-Jl-HrY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MxT-dp-qTy">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="181" id="BIo-ul-Sks">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="181"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BIo-ul-Sks" id="WYj-Hb-Bbb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="181"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XwQ-Yh-yXR">
+                                                    <rect key="frame" x="20" y="11" width="374" height="159"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plq-gF-HbF">
+                                                    <rect key="frame" x="20" y="11" width="374" height="159"/>
+                                                    <state key="normal" title="Watch List"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="plq-gF-HbF" secondAttribute="trailing" id="2g8-qn-6pS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="XwQ-Yh-yXR" secondAttribute="bottom" id="7jk-OP-b4N"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XwQ-Yh-yXR" secondAttribute="trailing" id="AyK-2E-ryU"/>
+                                                <constraint firstItem="plq-gF-HbF" firstAttribute="top" secondItem="WYj-Hb-Bbb" secondAttribute="topMargin" id="EwU-HC-PO4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="plq-gF-HbF" secondAttribute="bottom" id="Qd7-XP-1dh"/>
+                                                <constraint firstItem="plq-gF-HbF" firstAttribute="leading" secondItem="WYj-Hb-Bbb" secondAttribute="leadingMargin" id="kda-Iu-Oqp"/>
+                                                <constraint firstItem="XwQ-Yh-yXR" firstAttribute="leading" secondItem="WYj-Hb-Bbb" secondAttribute="leadingMargin" id="sTB-Oh-bcF"/>
+                                                <constraint firstItem="XwQ-Yh-yXR" firstAttribute="top" secondItem="WYj-Hb-Bbb" secondAttribute="topMargin" id="yLL-5e-LYi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tEq-zZ-iP6" firstAttribute="bottom" secondItem="MxT-dp-qTy" secondAttribute="bottom" id="10P-Na-Q26"/>
+                            <constraint firstItem="tEq-zZ-iP6" firstAttribute="trailing" secondItem="MxT-dp-qTy" secondAttribute="trailing" id="7A3-Ao-627"/>
+                            <constraint firstItem="MxT-dp-qTy" firstAttribute="leading" secondItem="tEq-zZ-iP6" secondAttribute="leading" id="qQg-ig-3cG"/>
+                            <constraint firstItem="MxT-dp-qTy" firstAttribute="top" secondItem="tEq-zZ-iP6" secondAttribute="top" id="zGX-zf-66l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tEq-zZ-iP6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cC7-Tz-xv7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="piV-va-pCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="489.85507246376818" y="-914.0625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RHU-U0-ETg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2TH-tI-Chu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lkg-se-bgJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ed2-K1-DBq" kind="relationship" relationship="rootViewController" id="hac-gB-GcE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VC2-Du-250" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-233.33333333333334" y="-914.0625"/>
+        </scene>
+    </scenes>
+</document>
