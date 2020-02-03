@@ -1,5 +1,5 @@
 //
-//  HomePageViewController.swift
+//  WatchListViewController.swift
 //  BinGee
 //
 //  Created by Nichole Davidson on 2/3/20.
@@ -8,15 +8,25 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController {
+class WatchListViewController: UIViewController {
 
+    
+
+    @IBOutlet weak var seriesTitleTextField: UITableViewCell!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func addSeriesButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func viewSeriesButtonTapped(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

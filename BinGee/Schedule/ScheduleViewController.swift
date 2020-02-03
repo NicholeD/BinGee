@@ -1,5 +1,5 @@
 //
-//  WatchListViewController.swift
+//  ScheduleViewController.swift
 //  BinGee
 //
 //  Created by Nichole Davidson on 2/3/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WatchListViewController: UIViewController {
+class ScheduleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
