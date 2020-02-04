@@ -65,7 +65,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="tKZ-L0-Sbz">
-                                                    <rect key="frame" x="20" y="11" width="374.00000000000091" height="159"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="159"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhH-V2-Ja3">
                                                     <rect key="frame" x="20" y="11" width="374" height="159"/>
@@ -157,21 +157,87 @@
             </objects>
             <point key="canvasLocation" x="212" y="-915"/>
         </scene>
-        <!--View Controller-->
+        <!--Theme Selection View Controller-->
         <scene sceneID="Veu-xq-rz8">
             <objects>
-                <viewController id="8GS-TB-vWa" sceneMemberID="viewController">
+                <viewController id="8GS-TB-vWa" customClass="ThemeSelectionViewController" customModule="BinGee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W5I-U8-Mj4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the theme you would like to use:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXX-3w-hgy">
+                                <rect key="frame" x="20" y="153" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yr4-ek-nou">
+                                <rect key="frame" x="106" y="193" width="70" height="39"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="12F-YD-L4d"/>
+                                    <constraint firstAttribute="height" constant="39" id="62h-Zg-9pF"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Dark">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" metaFont="system" size="22"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="selectDarkTheme:" destination="8GS-TB-vWa" eventType="touchUpInside" id="3Dv-rw-57p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mGM-LC-iRm">
+                                <rect key="frame" x="238" y="193" width="70" height="39"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="EM1-gi-Kql"/>
+                                    <constraint firstAttribute="height" constant="39" id="RjY-U4-qCv"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Light">
+                                            <attributes>
+                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" metaFont="system" size="22"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="selectYourColorHereTheme:" destination="8GS-TB-vWa" eventType="touchUpInside" id="OyE-F3-n3Y"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mGM-LC-iRm" firstAttribute="top" secondItem="HXX-3w-hgy" secondAttribute="bottom" constant="16" id="JUU-AD-NrA"/>
+                            <constraint firstItem="HXX-3w-hgy" firstAttribute="top" secondItem="fIX-kH-0MM" secondAttribute="top" constant="109" id="SLt-WK-ljo"/>
+                            <constraint firstItem="HXX-3w-hgy" firstAttribute="leading" secondItem="fIX-kH-0MM" secondAttribute="leading" constant="20" id="T3Q-yQ-Ldi"/>
+                            <constraint firstItem="fIX-kH-0MM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mGM-LC-iRm" secondAttribute="trailing" constant="106" id="WI0-3o-5Pw"/>
+                            <constraint firstItem="mGM-LC-iRm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yr4-ek-nou" secondAttribute="trailing" constant="62" id="ZvO-bN-BGp"/>
+                            <constraint firstItem="yr4-ek-nou" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fIX-kH-0MM" secondAttribute="leading" constant="106" id="evC-Kn-cXY"/>
+                            <constraint firstItem="fIX-kH-0MM" firstAttribute="bottom" secondItem="yr4-ek-nou" secondAttribute="bottom" constant="504" id="kmX-bT-YjU"/>
+                            <constraint firstItem="fIX-kH-0MM" firstAttribute="trailing" secondItem="mGM-LC-iRm" secondAttribute="trailing" constant="106" id="okK-Zb-v5B"/>
+                            <constraint firstItem="fIX-kH-0MM" firstAttribute="trailing" secondItem="HXX-3w-hgy" secondAttribute="trailing" constant="20" id="uyt-U4-znJ"/>
+                            <constraint firstItem="mGM-LC-iRm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yr4-ek-nou" secondAttribute="trailing" constant="62" id="vWl-it-we1"/>
+                            <constraint firstItem="yr4-ek-nou" firstAttribute="top" secondItem="HXX-3w-hgy" secondAttribute="bottom" constant="16" id="yJq-is-T5H"/>
+                            <constraint firstItem="fIX-kH-0MM" firstAttribute="bottom" secondItem="mGM-LC-iRm" secondAttribute="bottom" constant="504" id="ytx-L7-ON4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fIX-kH-0MM"/>
                     </view>
                     <navigationItem key="navigationItem" id="bdp-vF-W3A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcY-SS-yJw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="213" y="-1604"/>
+            <point key="canvasLocation" x="211.59420289855075" y="-1604.3478260869567"/>
         </scene>
         <!--Quick Calendar View Controller-->
         <scene sceneID="o3x-du-RzV">

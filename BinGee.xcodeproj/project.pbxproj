@@ -20,6 +20,8 @@
 		152544C123E8D7FD009B0312 /* QuickCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544C023E8D7FD009B0312 /* QuickCalendarViewController.swift */; };
 		152544C323E91233009B0312 /* HomeTilesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544C223E91233009B0312 /* HomeTilesTableViewCell.swift */; };
 		152544C523E91CE7009B0312 /* SeriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544C423E91CE7009B0312 /* SeriesController.swift */; };
+		15FC205A23E9DDE6008AC62A /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC205923E9DDE6008AC62A /* ThemeHelper.swift */; };
+		15FC205C23E9DE14008AC62A /* ThemeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC205B23E9DE14008AC62A /* ThemeSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		152544C023E8D7FD009B0312 /* QuickCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCalendarViewController.swift; sourceTree = "<group>"; };
 		152544C223E91233009B0312 /* HomeTilesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTilesTableViewCell.swift; sourceTree = "<group>"; };
 		152544C423E91CE7009B0312 /* SeriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesController.swift; sourceTree = "<group>"; };
+		15FC205923E9DDE6008AC62A /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
+		15FC205B23E9DE14008AC62A /* ThemeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			children = (
 				1525449E23E8AFFA009B0312 /* Main.storyboard */,
 				152544BA23E8CE15009B0312 /* HomePage */,
+				15FC205D23E9DE1F008AC62A /* Settings */,
 				152544BB23E8CE25009B0312 /* WatchList */,
 				152544B923E8CE06009B0312 /* Schedule */,
 				152544AC23E8B017009B0312 /* Resources */,
@@ -118,6 +123,15 @@
 				152544C423E91CE7009B0312 /* SeriesController.swift */,
 			);
 			path = WatchList;
+			sourceTree = "<group>";
+		};
+		15FC205D23E9DE1F008AC62A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				15FC205923E9DDE6008AC62A /* ThemeHelper.swift */,
+				15FC205B23E9DE14008AC62A /* ThemeSelectionViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				152544C523E91CE7009B0312 /* SeriesController.swift in Sources */,
+				15FC205C23E9DE14008AC62A /* ThemeSelectionViewController.swift in Sources */,
 				1525449923E8AFFA009B0312 /* AppDelegate.swift in Sources */,
 				152544C123E8D7FD009B0312 /* QuickCalendarViewController.swift in Sources */,
 				1525449B23E8AFFA009B0312 /* SceneDelegate.swift in Sources */,
@@ -199,6 +214,7 @@
 				152544BF23E8D343009B0312 /* AddSeriesViewController.swift in Sources */,
 				152544BD23E8CE62009B0312 /* Series.swift in Sources */,
 				152544B823E8CDC2009B0312 /* ScheduleViewController.swift in Sources */,
+				15FC205A23E9DDE6008AC62A /* ThemeHelper.swift in Sources */,
 				152544B223E8C053009B0312 /* WatchListViewController.swift in Sources */,
 				152544B023E8B9B4009B0312 /* HomePageViewController.swift in Sources */,
 			);
