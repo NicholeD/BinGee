@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2TH-tI-Chu">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,14 +12,14 @@
             <objects>
                 <viewController id="ed2-K1-DBq" customClass="HomePageViewController" customModule="BinGee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="13W-Jl-HrY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MxT-dp-qTy" customClass="HomeTilesTableView" customModule="BinGee" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="181" id="BIo-ul-Sks">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WatchListTableViewCell" rowHeight="181" id="BIo-ul-Sks" customClass="HomeTilesTableViewCell" customModule="BinGee" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BIo-ul-Sks" id="WYj-Hb-Bbb">
@@ -36,6 +36,7 @@
                                                         <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
+                                                        <action selector="watchListButtonTapped:" destination="BIo-ul-Sks" eventType="touchUpInside" id="7Rn-an-MaK"/>
                                                         <action selector="watchListButtonTapped:" destination="MxT-dp-qTy" eventType="touchUpInside" id="Inq-St-P60"/>
                                                         <segue destination="8RN-RB-woR" kind="show" identifier="WatchListSegue" id="4gK-5Q-yf5"/>
                                                     </connections>
@@ -52,8 +53,11 @@
                                                 <constraint firstItem="XwQ-Yh-yXR" firstAttribute="top" secondItem="WYj-Hb-Bbb" secondAttribute="topMargin" id="yLL-5e-LYi"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="movieTheaterImage" destination="XwQ-Yh-yXR" id="HzY-Q6-JBR"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="181" id="zcq-03-StS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScheduleTableViewCell" rowHeight="181" id="zcq-03-StS" customClass="HomeTilesTableViewCell" customModule="BinGee" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="209" width="414" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zcq-03-StS" id="bE6-yh-rci">
@@ -61,7 +65,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="tKZ-L0-Sbz">
-                                                    <rect key="frame" x="20" y="11" width="374" height="159"/>
+                                                    <rect key="frame" x="20" y="11" width="374.00000000000091" height="159"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhH-V2-Ja3">
                                                     <rect key="frame" x="20" y="11" width="374" height="159"/>
@@ -70,6 +74,7 @@
                                                         <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
+                                                        <action selector="scheduleButtonTapped:" destination="zcq-03-StS" eventType="touchUpInside" id="muj-U2-es0"/>
                                                         <action selector="scheduleButtonTapped:" destination="MxT-dp-qTy" eventType="touchUpInside" id="p1a-vd-thO"/>
                                                         <segue destination="myh-19-DC4" kind="show" identifier="ScheduleSegue" id="Xa9-af-EQ2"/>
                                                     </connections>
@@ -86,8 +91,11 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="BhH-V2-Ja3" secondAttribute="bottom" id="vMy-05-epN"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="calendarImage" destination="tKZ-L0-Sbz" id="YCp-7o-DOe"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="181" id="Eox-VZ-8Ga">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="181" id="Eox-VZ-8Ga" customClass="HomeTilesTableViewCell" customModule="BinGee" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="390" width="414" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eox-VZ-8Ga" id="A9H-yU-rrD">
@@ -147,14 +155,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="piV-va-pCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="309" y="-914"/>
+            <point key="canvasLocation" x="212" y="-915"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Veu-xq-rz8">
             <objects>
                 <viewController id="8GS-TB-vWa" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W5I-U8-Mj4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="fIX-kH-0MM"/>
@@ -170,7 +178,7 @@
             <objects>
                 <viewController id="uKn-q7-cRm" customClass="QuickCalendarViewController" customModule="BinGee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HKD-8j-Qgy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="XY7-1R-PIx"/>
@@ -185,29 +193,29 @@
             <objects>
                 <viewController id="8RN-RB-woR" customClass="WatchListViewController" customModule="BinGee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R5I-KS-Seh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LgX-TQ-FRP">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="I49-0i-LbP">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="54.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SeriesOnListCell" id="I49-0i-LbP">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="54.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I49-0i-LbP" id="G9G-d8-zdL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="54.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="54.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnS-dC-qoD">
-                                                    <rect key="frame" x="316" y="12" width="86" height="30.5"/>
+                                                    <rect key="frame" x="316" y="11.999999999999998" width="86" height="30.333333333333329"/>
                                                     <state key="normal" title="View Series"/>
                                                     <connections>
                                                         <action selector="viewSeriesButtonTapped:" destination="8RN-RB-woR" eventType="touchUpInside" id="QWn-CC-HzW"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTQ-8z-nnX">
-                                                    <rect key="frame" x="36" y="16.5" width="274" height="21"/>
+                                                    <rect key="frame" x="36" y="16.333333333333332" width="274" height="20.999999999999996"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="274" id="a7x-MW-5am"/>
                                                     </constraints>
@@ -247,43 +255,43 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="seriesTitleTextField" destination="I49-0i-LbP" id="mLr-RB-ghl"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4AD-Gb-OCZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="-914"/>
+            <point key="canvasLocation" x="1125" y="-801"/>
         </scene>
         <!--Add Series View Controller-->
         <scene sceneID="wmQ-Lw-CTP">
             <objects>
                 <viewController id="wTO-DP-BJz" customClass="AddSeriesViewController" customModule="BinGee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qUb-Tw-CLe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the series title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oe5-0X-8qb">
+                                <rect key="frame" x="20" y="153" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter number of seasons:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RFF-Ze-vDC">
+                                <rect key="frame" x="20" y="195" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6q9-JD-tPn">
+                                <rect key="frame" x="170" y="237" width="74" height="30"/>
+                                <state key="normal" title="Add Series"/>
+                                <connections>
+                                    <action selector="addSeriesTapped:" destination="wTO-DP-BJz" eventType="touchUpInside" id="9YV-cR-3TF"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Add a new series to your list" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tUx-y9-eIp">
-                                <rect key="frame" x="16" y="210" width="382" height="61"/>
+                                <rect key="frame" x="16" y="84" width="382" height="61"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the series title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oe5-0X-8qb">
-                                <rect key="frame" x="20" y="279" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter number of seasons:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RFF-Ze-vDC">
-                                <rect key="frame" x="20" y="321" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6q9-JD-tPn">
-                                <rect key="frame" x="170" y="363" width="74" height="30"/>
-                                <state key="normal" title="Add Series"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -304,17 +312,21 @@
                         <viewLayoutGuide key="safeArea" id="NLZ-Tn-Bpq"/>
                     </view>
                     <navigationItem key="navigationItem" id="e0U-FX-RRK"/>
+                    <connections>
+                        <outlet property="addSeriesTextField" destination="oe5-0X-8qb" id="o6l-bd-pCO"/>
+                        <outlet property="numberOfSeasonsTextField" destination="RFF-Ze-vDC" id="69Y-jz-tfi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6d-24-Jgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920" y="-914"/>
+            <point key="canvasLocation" x="1916" y="-801"/>
         </scene>
         <!--Schedule View Controller-->
         <scene sceneID="5FE-dh-Qmw">
             <objects>
                 <viewController id="myh-19-DC4" customClass="ScheduleViewController" customModule="BinGee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C31-v0-keM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="nyD-uj-Ouk"/>
@@ -323,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMc-Sb-y2H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="-209"/>
+            <point key="canvasLocation" x="212" y="-190"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RHU-U0-ETg">
@@ -331,7 +343,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2TH-tI-Chu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lkg-se-bgJ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

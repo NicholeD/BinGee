@@ -8,12 +8,11 @@
 
 import UIKit
 
-class WatchListViewController: UIViewController {
-
+class WatchListViewController: UIViewController, SeriesAddedDelegate {
     
-
-    @IBOutlet weak var seriesTitleTextField: UITableViewCell!
+    @IBOutlet weak var seriesTitleTextField: UITableView!
     
+    var seriesOnList: [Series] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,20 +20,34 @@ class WatchListViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func seriesWasAdded(_ series: Series) {
+        seriesOnList.append(series)
+//        tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, numberofRowsInSection section: Int) -> Int {
+        return seriesOnList.count
+    }
+    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeriesOnListCell", for: indexPath) as?
+//    }
+    
+    
     @IBAction func addSeriesButtonTapped(_ sender: Any) {
     }
     
     @IBAction func viewSeriesButtonTapped(_ sender: Any) {
     }
     
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+           if segue.identifier == "AddSeriesSegue" {
+               guard let addSeriesVC = segue.destination as? AddSeriesViewController else { return }
+                   addSeriesVC.delegate = self
+           }
+       }
 
 }
