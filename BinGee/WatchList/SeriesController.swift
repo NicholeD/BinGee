@@ -20,6 +20,8 @@ class SeriesController {
         let seriesName = Series(title: title, seasons: seasons)
         
         series.append(seriesName)
+        
+        saveToPersistentStore()
           
         }
     
@@ -64,7 +66,15 @@ class SeriesController {
             }
             
         }
+    func createSeries(with title: String, seasons: Int) {
+        
+        let seriesCreated = Series(title: title, seasons: seasons)
+        
+        series.append(seriesCreated)
+        
+        saveToPersistentStore()
+    }
     
-    
+    // need to create a deleteSeries func and updateHasBeenSeen func
 }
 

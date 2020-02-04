@@ -22,6 +22,7 @@
 		152544C523E91CE7009B0312 /* SeriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544C423E91CE7009B0312 /* SeriesController.swift */; };
 		15FC205A23E9DDE6008AC62A /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC205923E9DDE6008AC62A /* ThemeHelper.swift */; };
 		15FC205C23E9DE14008AC62A /* ThemeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC205B23E9DE14008AC62A /* ThemeSelectionViewController.swift */; };
+		15FC205F23E9F0D9008AC62A /* WatchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC205E23E9F0D9008AC62A /* WatchListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		152544C423E91CE7009B0312 /* SeriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesController.swift; sourceTree = "<group>"; };
 		15FC205923E9DDE6008AC62A /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
 		15FC205B23E9DE14008AC62A /* ThemeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewController.swift; sourceTree = "<group>"; };
+		15FC205E23E9F0D9008AC62A /* WatchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				152544B123E8C053009B0312 /* WatchListViewController.swift */,
+				15FC205E23E9F0D9008AC62A /* WatchListTableViewCell.swift */,
 				152544BE23E8D343009B0312 /* AddSeriesViewController.swift */,
 				152544BC23E8CE62009B0312 /* Series.swift */,
 				152544C423E91CE7009B0312 /* SeriesController.swift */,
@@ -212,6 +215,7 @@
 				1525449B23E8AFFA009B0312 /* SceneDelegate.swift in Sources */,
 				152544C323E91233009B0312 /* HomeTilesTableViewCell.swift in Sources */,
 				152544BF23E8D343009B0312 /* AddSeriesViewController.swift in Sources */,
+				15FC205F23E9F0D9008AC62A /* WatchListTableViewCell.swift in Sources */,
 				152544BD23E8CE62009B0312 /* Series.swift in Sources */,
 				152544B823E8CDC2009B0312 /* ScheduleViewController.swift in Sources */,
 				15FC205A23E9DDE6008AC62A /* ThemeHelper.swift in Sources */,

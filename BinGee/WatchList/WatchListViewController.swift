@@ -10,9 +10,11 @@ import UIKit
 
 class WatchListViewController: UIViewController, SeriesAddedDelegate {
     
-    @IBOutlet weak var seriesTitleTextField: UITableView!
+    
+    
     
     var seriesOnList: [Series] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,25 +31,21 @@ class WatchListViewController: UIViewController, SeriesAddedDelegate {
         return seriesOnList.count
     }
     
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeriesOnListCell", for: indexPath) as?
-//    }
-    
-    
-    @IBAction func addSeriesButtonTapped(_ sender: Any) {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeriesOnListCell", for: indexPath) as? WatchListTableViewCell else { return UITableViewCell() }
+        
+        let series = seriesOnList[indexPath.row]
+        cell.series = series
+        
+        return cell
     }
-    
-    @IBAction func viewSeriesButtonTapped(_ sender: Any) {
-    }
-    
-
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            if segue.identifier == "AddSeriesSegue" {
                guard let addSeriesVC = segue.destination as? AddSeriesViewController else { return }
                    addSeriesVC.delegate = self
-           }
+           } 
        }
 
 }
