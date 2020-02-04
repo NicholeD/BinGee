@@ -10,7 +10,7 @@ import UIKit
 
 class WatchListViewController: UIViewController, SeriesAddedDelegate {
     
-    
+    var seriesController = SeriesController()
     
     
     var seriesOnList: [Series] = []
@@ -45,7 +45,10 @@ class WatchListViewController: UIViewController, SeriesAddedDelegate {
            if segue.identifier == "AddSeriesSegue" {
                guard let addSeriesVC = segue.destination as? AddSeriesViewController else { return }
                    addSeriesVC.delegate = self
-           } 
+                   
+           }
        }
-
+    
 }
+
+

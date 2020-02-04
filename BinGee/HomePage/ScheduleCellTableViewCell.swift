@@ -1,21 +1,18 @@
 //
-//  HomeTilesTableViewCell.swift
+//  ScheduleCellTableViewCell.swift
 //  BinGee
 //
-//  Created by Nichole Davidson on 2/3/20.
+//  Created by Nichole Davidson on 2/4/20.
 //  Copyright © 2020 Nichole Davidson. All rights reserved.
 //
 
 import UIKit
 
-class HomeTilesTableViewCell: UITableViewCell {
- 
-    @IBOutlet weak var watchListTableViewCell: UITableViewCell!
-    @IBOutlet weak var scheduleTableViewCell: UITableViewCell!
+class ScheduleCellTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var calendarImage: UIImageView!
+    @IBOutlet weak var scheduleBUtton: UIButton!
     
-    
-    
-  
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,5 +25,4 @@ class HomeTilesTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-   
 }

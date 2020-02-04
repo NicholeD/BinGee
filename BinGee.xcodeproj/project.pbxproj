@@ -23,6 +23,9 @@
 		15FC205A23E9DDE6008AC62A /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC205923E9DDE6008AC62A /* ThemeHelper.swift */; };
 		15FC205C23E9DE14008AC62A /* ThemeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC205B23E9DE14008AC62A /* ThemeSelectionViewController.swift */; };
 		15FC205F23E9F0D9008AC62A /* WatchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC205E23E9F0D9008AC62A /* WatchListTableViewCell.swift */; };
+		15FC206123EA1E54008AC62A /* HomeTilesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC206023EA1E54008AC62A /* HomeTilesTableViewController.swift */; };
+		15FC206523EA2A99008AC62A /* WatchListCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC206423EA2A99008AC62A /* WatchListCellTableViewCell.swift */; };
+		15FC206723EA2AAB008AC62A /* ScheduleCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC206623EA2AAB008AC62A /* ScheduleCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		15FC205923E9DDE6008AC62A /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
 		15FC205B23E9DE14008AC62A /* ThemeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewController.swift; sourceTree = "<group>"; };
 		15FC205E23E9F0D9008AC62A /* WatchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTableViewCell.swift; sourceTree = "<group>"; };
+		15FC206023EA1E54008AC62A /* HomeTilesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTilesTableViewController.swift; sourceTree = "<group>"; };
+		15FC206423EA2A99008AC62A /* WatchListCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListCellTableViewCell.swift; sourceTree = "<group>"; };
+		15FC206623EA2AAB008AC62A /* ScheduleCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				152544AF23E8B9B4009B0312 /* HomePageViewController.swift */,
+				15FC206023EA1E54008AC62A /* HomeTilesTableViewController.swift */,
 				152544C223E91233009B0312 /* HomeTilesTableViewCell.swift */,
+				15FC206423EA2A99008AC62A /* WatchListCellTableViewCell.swift */,
+				15FC206623EA2AAB008AC62A /* ScheduleCellTableViewCell.swift */,
 				152544C023E8D7FD009B0312 /* QuickCalendarViewController.swift */,
 			);
 			path = HomePage;
@@ -210,6 +219,7 @@
 			files = (
 				152544C523E91CE7009B0312 /* SeriesController.swift in Sources */,
 				15FC205C23E9DE14008AC62A /* ThemeSelectionViewController.swift in Sources */,
+				15FC206123EA1E54008AC62A /* HomeTilesTableViewController.swift in Sources */,
 				1525449923E8AFFA009B0312 /* AppDelegate.swift in Sources */,
 				152544C123E8D7FD009B0312 /* QuickCalendarViewController.swift in Sources */,
 				1525449B23E8AFFA009B0312 /* SceneDelegate.swift in Sources */,
@@ -217,6 +227,8 @@
 				152544BF23E8D343009B0312 /* AddSeriesViewController.swift in Sources */,
 				15FC205F23E9F0D9008AC62A /* WatchListTableViewCell.swift in Sources */,
 				152544BD23E8CE62009B0312 /* Series.swift in Sources */,
+				15FC206723EA2AAB008AC62A /* ScheduleCellTableViewCell.swift in Sources */,
+				15FC206523EA2A99008AC62A /* WatchListCellTableViewCell.swift in Sources */,
 				152544B823E8CDC2009B0312 /* ScheduleViewController.swift in Sources */,
 				15FC205A23E9DDE6008AC62A /* ThemeHelper.swift in Sources */,
 				152544B223E8C053009B0312 /* WatchListViewController.swift in Sources */,

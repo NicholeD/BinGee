@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2TH-tI-Chu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fZI-12-aT2">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -15,14 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MxT-dp-qTy" customClass="HomeTilesTableView" customModule="BinGee" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MxT-dp-qTy" customClass="HomeTileTableViewController">
                                 <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WatchListTableViewCell" rowHeight="181" id="BIo-ul-Sks" customClass="HomeTilesTableViewCell" customModule="BinGee" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BIo-ul-Sks" id="WYj-Hb-Bbb">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BIo-ul-Sks" id="WYj-Hb-Bbb" customClass="WatchListCellTableViewCell" customModule="BinGee" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="181"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -37,7 +37,6 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="watchListButtonTapped:" destination="BIo-ul-Sks" eventType="touchUpInside" id="7Rn-an-MaK"/>
-                                                        <action selector="watchListButtonTapped:" destination="MxT-dp-qTy" eventType="touchUpInside" id="Inq-St-P60"/>
                                                         <segue destination="8RN-RB-woR" kind="show" identifier="WatchListSegue" id="4gK-5Q-yf5"/>
                                                     </connections>
                                                 </button>
@@ -52,15 +51,20 @@
                                                 <constraint firstItem="XwQ-Yh-yXR" firstAttribute="leading" secondItem="WYj-Hb-Bbb" secondAttribute="leadingMargin" id="sTB-Oh-bcF"/>
                                                 <constraint firstItem="XwQ-Yh-yXR" firstAttribute="top" secondItem="WYj-Hb-Bbb" secondAttribute="topMargin" id="yLL-5e-LYi"/>
                                             </constraints>
+                                            <connections>
+                                                <outlet property="movieTheaterImage" destination="XwQ-Yh-yXR" id="09D-p5-JnL"/>
+                                                <outlet property="watchListButton" destination="plq-gF-HbF" id="rdT-qZ-wLV"/>
+                                            </connections>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="movieTheaterImage" destination="XwQ-Yh-yXR" id="HzY-Q6-JBR"/>
+                                            <outlet property="watchListTableViewCell" destination="WYj-Hb-Bbb" id="NJc-Ou-GcB"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScheduleTableViewCell" rowHeight="181" id="zcq-03-StS" customClass="HomeTilesTableViewCell" customModule="BinGee" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="209" width="414" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zcq-03-StS" id="bE6-yh-rci">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zcq-03-StS" id="bE6-yh-rci" customClass="ScheduleCellTableViewCell" customModule="BinGee" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="181"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -75,7 +79,6 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="scheduleButtonTapped:" destination="zcq-03-StS" eventType="touchUpInside" id="muj-U2-es0"/>
-                                                        <action selector="scheduleButtonTapped:" destination="MxT-dp-qTy" eventType="touchUpInside" id="p1a-vd-thO"/>
                                                         <segue destination="myh-19-DC4" kind="show" identifier="ScheduleSegue" id="Xa9-af-EQ2"/>
                                                     </connections>
                                                 </button>
@@ -90,12 +93,17 @@
                                                 <constraint firstItem="tKZ-L0-Sbz" firstAttribute="top" secondItem="bE6-yh-rci" secondAttribute="topMargin" id="qlz-GU-6Ds"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="BhH-V2-Ja3" secondAttribute="bottom" id="vMy-05-epN"/>
                                             </constraints>
+                                            <connections>
+                                                <outlet property="calendarImage" destination="tKZ-L0-Sbz" id="qlx-3q-Gdu"/>
+                                                <outlet property="scheduleBUtton" destination="BhH-V2-Ja3" id="ptP-dC-295"/>
+                                            </connections>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="calendarImage" destination="tKZ-L0-Sbz" id="YCp-7o-DOe"/>
+                                            <outlet property="scheduleTableViewCell" destination="bE6-yh-rci" id="5mE-cX-N9c"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="181" id="Eox-VZ-8Ga" customClass="HomeTilesTableViewCell" customModule="BinGee" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EmptyTableCell" rowHeight="181" id="Eox-VZ-8Ga" customClass="HomeTilesTableViewCell" customModule="BinGee" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="390" width="414" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eox-VZ-8Ga" id="A9H-yU-rrD">
@@ -149,13 +157,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="homeTilesTableView" destination="MxT-dp-qTy" id="LzM-7O-zyl"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="piV-va-pCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="212" y="-915"/>
+            <point key="canvasLocation" x="1118.840579710145" y="-915.48913043478262"/>
         </scene>
         <!--Theme Selection View Controller-->
         <scene sceneID="Veu-xq-rz8">
@@ -331,7 +336,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4AD-Gb-OCZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="-801"/>
+            <point key="canvasLocation" x="2031.8840579710147" y="-801.35869565217399"/>
         </scene>
         <!--Add Series View Controller-->
         <scene sceneID="wmQ-Lw-CTP">
@@ -392,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6d-24-Jgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1916" y="-801"/>
+            <point key="canvasLocation" x="2823.1884057971015" y="-801.35869565217399"/>
         </scene>
         <!--Schedule View Controller-->
         <scene sceneID="5FE-dh-Qmw">
@@ -408,25 +413,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMc-Sb-y2H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="212" y="-190"/>
+            <point key="canvasLocation" x="1119" y="-196"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="RHU-U0-ETg">
+        <scene sceneID="iru-QO-dgi">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2TH-tI-Chu" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fZI-12-aT2" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lkg-se-bgJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WKj-TP-qTx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ed2-K1-DBq" kind="relationship" relationship="rootViewController" id="hac-gB-GcE"/>
+                        <segue destination="ed2-K1-DBq" kind="relationship" relationship="rootViewController" id="Yii-jS-twv"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VC2-Du-250" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2o-jy-gK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-574" y="-914"/>
+            <point key="canvasLocation" x="211.59420289855075" y="-915.48913043478262"/>
         </scene>
     </scenes>
     <resources>

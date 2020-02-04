@@ -10,6 +10,9 @@ import UIKit
 
 class ScheduleViewController: UIViewController {
 
+    let seriesController = SeriesController()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
