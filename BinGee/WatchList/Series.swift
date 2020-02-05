@@ -10,13 +10,17 @@ import Foundation
 
 class Series: Codable {
     var title: String
-    var seasons: Int
-    var totalEpisodes: Int = 0
-    var seen: Bool = false
+    var seasons: [SeriesSeason]
+    var totalEpisodes: Int
+    var scheduleDate: Date
+    var seen: Bool
     
-    init(title: String, seasons: Int) {
+    init(title: String, seasons: [SeriesSeason], totalEpisodes: Int, scheduleDate: Date, seen: Bool = false) {
         self.title = title
-        self.seasons = seasons
+        self.seasons = []
+        self.totalEpisodes = totalEpisodes
+        self.scheduleDate = scheduleDate
+        self.seen = seen
     }
 }
 
@@ -24,7 +28,7 @@ class SeriesSeason: Codable {
     var seasonNumber: Int
     var episodeCount: Int
     var seen: Bool = false
-    
+
     init(seasonNumber: Int, episodeCount: Int) {
     self.seasonNumber = seasonNumber
     self.episodeCount = episodeCount
@@ -34,7 +38,7 @@ class SeriesSeason: Codable {
 class Episode: Codable {
     var episodeNumber: Int
     var seen: Bool = false
-    
+
     init(episodeNumber: Int) {
     self.episodeNumber = episodeNumber
     }
