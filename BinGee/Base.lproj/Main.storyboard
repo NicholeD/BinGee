@@ -20,9 +20,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="70"/>
                                 <state key="normal" title="Watch List" backgroundImage="EmptyMovieTheater">
-                                    <color key="titleColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.92340180837563457" green="0.92340180837563457" blue="0.92340180837563457" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="watchListButtonTapped:" destination="ed2-K1-DBq" eventType="touchUpInside" id="40V-ea-afR"/>
                                     <segue destination="8RN-RB-woR" kind="show" identifier="WatchListShowSegue" id="5gT-Fg-MAK"/>
                                 </connections>
                             </button>
@@ -31,9 +32,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="70"/>
                                 <state key="normal" title="Schedule" backgroundImage="Calendar">
-                                    <color key="titleColor" red="0.30623409074923857" green="0.035353631439331033" blue="0.00086954533891083917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.96383248730964466" green="0.96383248730964466" blue="0.96383248730964466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="scheduleButtonTapped:" destination="ed2-K1-DBq" eventType="touchUpInside" id="GHZ-Mg-UTj"/>
                                     <segue destination="myh-19-DC4" kind="show" identifier="ScheduleShowSegue" id="wD4-lo-a4K"/>
                                 </connections>
                             </button>
@@ -47,8 +49,11 @@
                                 <segue destination="8GS-TB-vWa" kind="show" identifier="SettingsButtonSegue" id="Aoz-mG-oJ2"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="calendar.circle" catalog="system" id="iXp-Xm-c2U"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="scheduleButton" destination="6Vu-m0-EPz" id="DHa-Vf-c7W"/>
+                        <outlet property="watchListButton" destination="PZJ-mK-pRO" id="08M-Qn-pWp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="piV-va-pCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,7 +208,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cic-6B-M48">
                             <connections>
                                 <action selector="addSeriesButtonTapped:" destination="8RN-RB-woR" id="ACa-s8-1x3"/>
-                                <segue destination="wTO-DP-BJz" kind="show" identifier="AddSeriesSegue" id="Pkr-lF-C0a"/>
+                                <segue destination="wTO-DP-BJz" kind="show" identifier="AddSeriesShowSegue" id="Pkr-lF-C0a"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -314,7 +319,6 @@
     <resources>
         <image name="Calendar" width="3899" height="5647"/>
         <image name="EmptyMovieTheater" width="6000" height="4000"/>
-        <image name="calendar.circle" catalog="system" width="64" height="60"/>
         <image name="line.horizontal.3" catalog="system" width="64" height="32"/>
     </resources>
 </document>

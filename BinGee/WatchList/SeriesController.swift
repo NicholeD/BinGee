@@ -15,8 +15,8 @@ class SeriesController {
 //    }
     var series: [Series] = []
     
-    func addSeriesTapped(with title: String, seasons: Int) {
-        let seriesName = Series(title: title, seasons: seasons)
+    func addSeriesTapped(with title: String, seasons: Int, totalEpisodes: Int, scheduleDate: Date) {
+        let seriesName = Series(title: title, seasons: [], totalEpisodes: totalEpisodes, scheduleDate: scheduleDate)
         
         series.append(seriesName)
         

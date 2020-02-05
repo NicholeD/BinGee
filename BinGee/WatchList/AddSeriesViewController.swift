@@ -30,19 +30,21 @@ class AddSeriesViewController: UIViewController {
     }
     
     @IBAction func addSeriesTapped(_ sender: Any) {
-        guard let title = addSeriesTextField.text,
-            let seasonsString = numberOfSeasonsTextField.text,
-            let seasons = Int(seasonsString) else { return }
-        
-        let series = Series(title: title, seasons: seasons)
-        
-        seriesController.addSeriesTapped(with: title, seasons: seasons)
-        
-        delegate?.seriesWasAdded(series)
-    
-    if let navController = self.navigationController {
-        navController.popViewController(animated: true)
-    }
+//        guard let title = addSeriesTextField.text,
+//            let seasonsString = numberOfSeasonsTextField.text,
+//            let seasons = Int(seasonsString),
+//            let totalEpisodes =
+//            else { return }
+//
+//        let series = Series(title: title, seasons: [], totalEpisodes: totalEpisodes, scheduleDate: scheduleDate)
+//
+//        seriesController.addSeriesTapped(with: title, seasons: seasons, totalEpisodes: totalEpisodes, scheduleDate: scheduleDate)
+//
+//        delegate?.seriesWasAdded(series)
+//
+//    if let navController = self.navigationController {
+//        navController.popViewController(animated: true)
+//    }
   }
 }
 
