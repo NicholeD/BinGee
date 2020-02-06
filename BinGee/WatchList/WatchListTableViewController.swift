@@ -7,6 +7,10 @@
 //
 
 import UIKit
+protocol SeriesAddedDelegate {
+    
+    func seriesWasAdded(_ series: Series)
+}
 
 class WatchListTableViewController: UITableViewController, SeriesAddedDelegate {
   
@@ -21,15 +25,33 @@ class WatchListTableViewController: UITableViewController, SeriesAddedDelegate {
     
     var series: [Series] = []
     
+     var delegate: SeriesAddedDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
     }
     
     @IBAction func addSeries(_ sender: Any){
         
-    }
+    
+    //        guard let title = addSeriesTextField.text,
+    //            let seasonsString = numberOfSeasonsTextField.text,
+    //            let seasons = Int(seasonsString),
+    //            let totalEpisodes =
+    //            else { return }
+    //
+    //        let series = Series(title: title, seasons: [], totalEpisodes: totalEpisodes, scheduleDate: scheduleDate)
+    //
+    //        seriesController.addSeriesTapped(with: title, seasons: seasons, totalEpisodes: totalEpisodes, scheduleDate: scheduleDate)
+    //
+    //        delegate?.seriesWasAdded(series)
+    //
+    //    if let navController = self.navigationController {
+    //        navController.popViewController(animated: true)
+    //    }
+      }
+    
     func seriesWasAdded(_ series: Series) {
 //        series.append(series)
 
@@ -73,5 +95,21 @@ class WatchListTableViewController: UITableViewController, SeriesAddedDelegate {
             watchListVC.seriesController = seriesController
         }
 
+}
+}
+extension AddSeriesViewController: UITextFieldDelegate {
+func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    if let text = textField.text,
+        !text.isEmpty {
+        switch textField {
+        case addSeriesTextField:
+            textField.resignFirstResponder()
+        case numberOfSeasonsTextField:
+            textField.resignFirstResponder()
+        default:
+            textField.resignFirstResponder()
+        }
+    }
+    return false
 }
 }

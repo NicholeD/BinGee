@@ -39,10 +39,9 @@ class SeriesController {
     var seriesListURL: URL? {
 
         let fileManager = FileManager.default
-
         guard let documentsDir = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
 
-        let seriesURL = documentsDir.appendingPathComponent("Series.plist")
+        let seriesURL = documentsDir.appendingPathComponent("SeriesList.plist")
 
         return seriesURL
     }
