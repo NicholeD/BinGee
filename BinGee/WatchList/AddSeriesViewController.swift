@@ -21,7 +21,7 @@ class AddSeriesViewController: UIViewController {
     
     var delegate: SeriesAddedDelegate?
     
-    let seriesController = SeriesController()
+    var seriesController = SeriesController()
     
     override func viewDidLoad() {
         super.viewDidLoad()

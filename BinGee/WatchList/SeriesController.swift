@@ -10,9 +10,11 @@ import Foundation
 
 class SeriesController {
     
-//    init() {
-//        loadFromPersistentStore()
-//    }
+    init() {
+      
+        loadFromPersistentStore()
+    }
+    
     var series: [Series] = []
     
     func addSeriesTapped(with title: String, seasons: Int, totalEpisodes: Int, scheduleDate: Date) {
@@ -24,13 +26,23 @@ class SeriesController {
           
         }
     
+    func createSeries(with title: String, seasons: Int, totalEpisodes: Int, scheduleDate: Date) {
+
+           let seriesCreated = Series(title: title, seasons: [], totalEpisodes: totalEpisodes, scheduleDate: scheduleDate)
+
+           series.append(seriesCreated)
+
+           saveToPersistentStore()
+       }
+    
+    
     var seriesListURL: URL? {
 
         let fileManager = FileManager.default
 
         guard let documentsDir = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
 
-        let seriesURL = documentsDir.appendingPathComponent("SeriesList.plist")
+        let seriesURL = documentsDir.appendingPathComponent("Series.plist")
 
         return seriesURL
     }
@@ -65,14 +77,7 @@ class SeriesController {
             }
 
         }
-    func createSeries(with title: String, seasons: Int, totalEpisodes: Int, scheduleDate: Date) {
-
-        let seriesCreated = Series(title: title, seasons: [], totalEpisodes: totalEpisodes, scheduleDate: scheduleDate)
-
-        series.append(seriesCreated)
-
-        saveToPersistentStore()
-    }
+   
 
 //     need to create a deleteSeries func and updateHasBeenSeen func ???
 }

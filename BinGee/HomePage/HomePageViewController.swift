@@ -24,20 +24,13 @@ class HomePageViewController: UIViewController {
     
     @IBAction func watchListButtonTapped(_ sender: Any) {
         
-         navigationController?.popViewController(animated: true)
-        
-        
     }
     
     @IBAction func scheduleButtonTapped(_ sender: Any) {
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "WatchListShowSegue" {
-            guard let watchListVC = segue.destination as? WatchListTableViewController else { return }
-            watchListVC.seriesController = seriesController
-        }
-    }
+    
+    
 //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //           // #warning Incomplete implementation, return the number of rows
 //           return 3
@@ -51,6 +44,11 @@ class HomePageViewController: UIViewController {
 //       }
     
     // MARK: - Navigation
-
-   
+    
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if segue.identifier == "WatchListShowSegue" {
+               guard let watchListVC = segue.destination as? WatchListTableViewController else { return }
+               watchListVC.seriesController = seriesController
+        }
+    }
 }

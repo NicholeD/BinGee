@@ -20,7 +20,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="70"/>
                                 <state key="normal" title="Watch List" backgroundImage="EmptyMovieTheater">
-                                    <color key="titleColor" red="0.92340180837563457" green="0.92340180837563457" blue="0.92340180837563457" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="watchListButtonTapped:" destination="ed2-K1-DBq" eventType="touchUpInside" id="40V-ea-afR"/>
@@ -32,7 +32,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="70"/>
                                 <state key="normal" title="Schedule" backgroundImage="Calendar">
-                                    <color key="titleColor" red="0.96383248730964466" green="0.96383248730964466" blue="0.96383248730964466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="scheduleButtonTapped:" destination="ed2-K1-DBq" eventType="touchUpInside" id="GHZ-Mg-UTj"/>
@@ -144,7 +144,7 @@
         <!--Watch List-->
         <scene sceneID="Cy2-c6-9RA">
             <objects>
-                <viewController storyboardIdentifier="MySecondScreen" id="8RN-RB-woR" customClass="WatchListTableViewController" customModule="BinGee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8RN-RB-woR" customClass="WatchListTableViewController" customModule="BinGee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R5I-KS-Seh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -163,6 +163,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnS-dC-qoD">
                                                     <rect key="frame" x="316" y="12" width="86" height="53"/>
                                                     <state key="normal" title="View Series"/>
+                                                    <connections>
+                                                        <segue destination="wTO-DP-BJz" kind="show" identifier="ViewSeriesShowSegue" id="ZLb-nl-g4J"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTQ-8z-nnX">
                                                     <rect key="frame" x="36" y="15" width="274" height="21"/>

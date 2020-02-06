@@ -15,22 +15,31 @@ class WatchListTableViewCell: UITableViewCell {
     @IBOutlet weak var viewSeriesButton: UIButton!
     
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+
+    var seriesController = SeriesController()
+     var series: [Series] = []
+    
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        // Initialization code
+//    }
 
     
     @IBAction func viewSeriesButtonTapped(_ sender: UIButton) {
-       let storyboard = UIStoryboard(name: "HomePage", bundle: nil);
-       let vc = storyboard.instantiateViewControllerWithIdentifier("MySecondScreen") as! UIViewController; 
-       self.presentViewController(vc, animated: true, completion: nil)
-      
     }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
+    
+//     func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "ViewSeriesShowSegue" {
+//            guard let viewSeriesVC = segue.destination as? AddSeriesViewController else { return }
+//         viewSeriesVC.seriesController = seriesController
+//
+//        }
+//    }
 
 }
