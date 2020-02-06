@@ -22,9 +22,9 @@ class WatchListTableViewController: UIViewController,UITableViewDelegate, UITabl
     @IBOutlet weak var enterTotalNumberOfEpisodesTextField: UITextField!
     
     var seriesController: SeriesController?
-     var series: [Series] = []
+//    var series: Series?
     
-     var delegate: SeriesAddedDelegate!
+     var delegate: SeriesAddedDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,27 +32,25 @@ class WatchListTableViewController: UIViewController,UITableViewDelegate, UITabl
     }
     
     @IBAction func addSeries(_ sender: Any){
-        
+            guard let title = enterSeriesTextField.text,
+                let seasonsString = enterNumberOfSeasonsTextField.text,
+                let seasons = Int(seasonsString),
+                let totalEpisodes = enterTotalNumberOfEpisodesTextField.text,
+                let episodes = Int(totalEpisodes)
+                else { return }
     
-    //        guard let title = addSeriesTextField.text,
-    //            let seasonsString = numberOfSeasonsTextField.text,
-    //            let seasons = Int(seasonsString),
-    //            let totalEpisodes =
-    //            else { return }
-    //
-    //        let series = Series(title: title, seasons: [], totalEpisodes: totalEpisodes, scheduleDate: scheduleDate)
-    //
-    //        seriesController.addSeriesTapped(with: title, seasons: seasons, totalEpisodes: totalEpisodes, scheduleDate: scheduleDate)
-    //
-    //        delegate?.seriesWasAdded(series)
-    //
-    //    if let navController = self.navigationController {
-    //        navController.popViewController(animated: true)
-    //    }
+        let series = Series(title: title, seasons: [], totalEpisodes: episodes, scheduleDate: Date.init(), seen: false)
+    
+//            seriesController.addSeriesTapped(with: title, seasons: seasons, totalEpisodes: totalEpisodes, scheduleDate: scheduleDate)
+    
+//        if let navController = self.navigationController {
+//            navController.popViewController(animated: true)
+//        }
+         delegate?.seriesWasAdded(series)
       }
     
     func seriesWasAdded(_ series: Series) {
-//        series.append(series)
+//        seriesController.append(series)
 
 //            tableView.reloadData()
         }
@@ -79,10 +77,8 @@ class WatchListTableViewController: UIViewController,UITableViewDelegate, UITabl
                 let seriesController = seriesController else { return UITableViewCell()}
 
             let seriesOnList = seriesController.series[indexPath.row]
-            cell.series = [seriesOnList]
+            cell.series = seriesOnList
     
-          
-
             return cell
         }
 //        // MARK: - Navigation

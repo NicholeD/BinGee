@@ -176,6 +176,16 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohj-8K-1Gi">
+                                                    <rect key="frame" x="346" y="13" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Ohj-8K-1Gi" secondAttribute="height" multiplier="1:1" id="DeU-Y6-sgd"/>
+                                                    </constraints>
+                                                    <state key="normal" image="checked"/>
+                                                    <connections>
+                                                        <action selector="checkedButtonTapped:" destination="I49-0i-LbP" eventType="touchUpInside" id="UWz-OP-0S4"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="dTQ-8z-nnX" secondAttribute="bottom" constant="30" id="Lqk-IG-8NE"/>
@@ -183,6 +193,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkedButton" destination="Ohj-8K-1Gi" id="miT-r8-rC7"/>
                                             <outlet property="seriesEpisodeNumberLabel" destination="0le-OS-I9M" id="VJt-yN-BKB"/>
                                             <outlet property="seriesOnListLabel" destination="dTQ-8z-nnX" id="E5K-ME-pZV"/>
                                         </connections>
@@ -269,15 +280,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQH-v3-7NN">
+                                <rect key="frame" x="135" y="579" width="132" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="18"/>
+                                <state key="normal" title="SUBMIT" backgroundImage="icons8-play-button-480">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitDateButtonTapped:" destination="chZ-P8-5i4" eventType="touchUpInside" id="uyV-rq-9oL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="MH9-Uu-0k7"/>
                     </view>
                     <navigationItem key="navigationItem" id="QS4-2J-iV2"/>
+                    <connections>
+                        <outlet property="datePicker" destination="bdL-Xz-Edv" id="Uvi-8b-61N"/>
+                        <outlet property="submitDateButton" destination="tQH-v3-7NN" id="EFN-Pn-aCg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTR-8o-da6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2597" y="-916"/>
+            <point key="canvasLocation" x="2594.202898550725" y="-916.07142857142856"/>
         </scene>
         <!--Schedule View Controller-->
         <scene sceneID="5FE-dh-Qmw">
@@ -317,6 +343,8 @@
     <resources>
         <image name="Calendar" width="3899" height="5647"/>
         <image name="EmptyMovieTheater" width="6000" height="4000"/>
+        <image name="checked" width="50" height="50"/>
+        <image name="icons8-play-button-480" width="480" height="480"/>
         <image name="line.horizontal.3" catalog="system" width="64" height="32"/>
     </resources>
 </document>

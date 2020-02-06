@@ -8,18 +8,43 @@
 
 import UIKit
 
+protocol WatchListTableViewCellDelegate {
+    
+    func toggleHasBeenRead(for cell: WatchListTableViewCell)
+ 
+}
 class WatchListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var seriesOnListLabel: UILabel!
     @IBOutlet weak var seriesEpisodeNumberLabel: UILabel!
-  
-    var seriesController = SeriesController?.self
-    var series: [Series] = []
     
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        // Initialization code
-//    }
+    @IBOutlet weak var checkedButton: UIButton!
+    @IBAction func checkedButtonTapped(_ sender: Any) {
+        delegate?.toggleHasBeenRead(for: self)
+       }
+    
+    var seriesController = SeriesController?.self
+    
+    var delegate: WatchListTableViewCellDelegate?
+    
+//    var delegate: SeriesAddedDelegate?
+    
+     var series: Series?
+    
+     func viewDidLoad() {
+       
+        updateViews()
+    }
+    
+   
+    
+    func updateViews() {
+        guard let series = series else { return }
+        
+        seriesOnListLabel.text = series.title
+        seriesEpisodeNumberLabel.text = String(series.totalEpisodes)
+        
+    }
 
     
  

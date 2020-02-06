@@ -12,13 +12,26 @@ class DatePickerViewController: UIViewController {
 
     var seriesController: SeriesController?
     
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var submitDateButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    func updateViews() {
+        guard datePicker != nil else { return }
+        
+    }
+    
 
+    @IBAction func submitDateButtonTapped(_ sender: Any) {
+        
+       navigationController?.popViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 
