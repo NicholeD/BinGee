@@ -13,14 +13,14 @@
 		152544A223E8AFFB009B0312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 152544A123E8AFFB009B0312 /* Assets.xcassets */; };
 		152544A523E8AFFB009B0312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 152544A323E8AFFB009B0312 /* LaunchScreen.storyboard */; };
 		152544B023E8B9B4009B0312 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544AF23E8B9B4009B0312 /* HomePageViewController.swift */; };
-		152544B223E8C053009B0312 /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544B123E8C053009B0312 /* WatchListViewController.swift */; };
 		152544B823E8CDC2009B0312 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544B723E8CDC2009B0312 /* ScheduleViewController.swift */; };
 		152544BD23E8CE62009B0312 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544BC23E8CE62009B0312 /* Series.swift */; };
 		152544BF23E8D343009B0312 /* AddSeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544BE23E8D343009B0312 /* AddSeriesViewController.swift */; };
 		152544C523E91CE7009B0312 /* SeriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544C423E91CE7009B0312 /* SeriesController.swift */; };
+		15C3BC9E23EB7CCF002DF6B9 /* WatchListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C3BC9D23EB7CCF002DF6B9 /* WatchListTableViewController.swift */; };
+		15C3BCA023EB8BB0002DF6B9 /* WatchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C3BC9F23EB8BB0002DF6B9 /* WatchListTableViewCell.swift */; };
 		15FC205A23E9DDE6008AC62A /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC205923E9DDE6008AC62A /* ThemeHelper.swift */; };
 		15FC205C23E9DE14008AC62A /* ThemeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC205B23E9DE14008AC62A /* ThemeSelectionViewController.swift */; };
-		15FC205F23E9F0D9008AC62A /* WatchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC205E23E9F0D9008AC62A /* WatchListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,14 +32,14 @@
 		152544A423E8AFFB009B0312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		152544A623E8AFFB009B0312 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		152544AF23E8B9B4009B0312 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
-		152544B123E8C053009B0312 /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
 		152544B723E8CDC2009B0312 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		152544BC23E8CE62009B0312 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		152544BE23E8D343009B0312 /* AddSeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSeriesViewController.swift; sourceTree = "<group>"; };
 		152544C423E91CE7009B0312 /* SeriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesController.swift; sourceTree = "<group>"; };
+		15C3BC9D23EB7CCF002DF6B9 /* WatchListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTableViewController.swift; sourceTree = "<group>"; };
+		15C3BC9F23EB8BB0002DF6B9 /* WatchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTableViewCell.swift; sourceTree = "<group>"; };
 		15FC205923E9DDE6008AC62A /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
 		15FC205B23E9DE14008AC62A /* ThemeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewController.swift; sourceTree = "<group>"; };
-		15FC205E23E9F0D9008AC62A /* WatchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +113,8 @@
 		152544BB23E8CE25009B0312 /* WatchList */ = {
 			isa = PBXGroup;
 			children = (
-				152544B123E8C053009B0312 /* WatchListViewController.swift */,
-				15FC205E23E9F0D9008AC62A /* WatchListTableViewCell.swift */,
+				15C3BC9D23EB7CCF002DF6B9 /* WatchListTableViewController.swift */,
+				15C3BC9F23EB8BB0002DF6B9 /* WatchListTableViewCell.swift */,
 				152544BE23E8D343009B0312 /* AddSeriesViewController.swift */,
 				152544BC23E8CE62009B0312 /* Series.swift */,
 				152544C423E91CE7009B0312 /* SeriesController.swift */,
@@ -205,14 +205,14 @@
 				152544C523E91CE7009B0312 /* SeriesController.swift in Sources */,
 				15FC205C23E9DE14008AC62A /* ThemeSelectionViewController.swift in Sources */,
 				1525449923E8AFFA009B0312 /* AppDelegate.swift in Sources */,
+				15C3BC9E23EB7CCF002DF6B9 /* WatchListTableViewController.swift in Sources */,
 				1525449B23E8AFFA009B0312 /* SceneDelegate.swift in Sources */,
 				152544BF23E8D343009B0312 /* AddSeriesViewController.swift in Sources */,
-				15FC205F23E9F0D9008AC62A /* WatchListTableViewCell.swift in Sources */,
 				152544BD23E8CE62009B0312 /* Series.swift in Sources */,
 				152544B823E8CDC2009B0312 /* ScheduleViewController.swift in Sources */,
 				15FC205A23E9DDE6008AC62A /* ThemeHelper.swift in Sources */,
-				152544B223E8C053009B0312 /* WatchListViewController.swift in Sources */,
 				152544B023E8B9B4009B0312 /* HomePageViewController.swift in Sources */,
+				15C3BCA023EB8BB0002DF6B9 /* WatchListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
