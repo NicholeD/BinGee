@@ -12,7 +12,7 @@ protocol SeriesAddedDelegate {
     func seriesWasAdded(_ series: Series)
 }
 
-class WatchListTableViewController: UITableViewController, SeriesAddedDelegate {
+class WatchListTableViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, SeriesAddedDelegate {
   
 
 
@@ -21,11 +21,10 @@ class WatchListTableViewController: UITableViewController, SeriesAddedDelegate {
     @IBOutlet weak var enterNumberOfSeasonsTextField: UITextField!
     @IBOutlet weak var enterTotalNumberOfEpisodesTextField: UITextField!
     
-    var seriesController = SeriesController()
+    var seriesController: SeriesController?
+     var series: [Series] = []
     
-    var series: [Series] = []
-    
-     var delegate: SeriesAddedDelegate?
+     var delegate: SeriesAddedDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,31 +56,31 @@ class WatchListTableViewController: UITableViewController, SeriesAddedDelegate {
 
 //            tableView.reloadData()
         }
-//
 //          var series: Series? {
 //              didSet {
 ////                  updateViews()
 //              }
 //          }
-          
 //          private func updateViews() {
 //              guard let series = series else { return }
 //
 //              seriesOnListLabel.text = series.title
 //          }
           
-
        // MARK: - Table view data source
     
-        func tableView(_ tableView: UITableView, numberofRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            guard let seriesController = seriesController else { return 0}
             return seriesController.series.count
         }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeriesOnListCell", for: indexPath) as? WatchListTableViewCell else { return UITableViewCell()}
+   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeriesOnListCell", for: indexPath) as? WatchListTableViewCell,
+                let seriesController = seriesController else { return UITableViewCell()}
 
             let seriesOnList = seriesController.series[indexPath.row]
             cell.series = [seriesOnList]
+    
           
 
             return cell
@@ -90,11 +89,13 @@ class WatchListTableViewController: UITableViewController, SeriesAddedDelegate {
     
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "WatchListShowSegue" {
-            guard let watchListVC = segue.destination as? ViewSeriesTableViewController else { return }
-            watchListVC.seriesController = seriesController
+        if segue.identifier == "AddSeriesModallySegue" {
+            guard let addSeriesVC = segue.destination as? DatePickerViewController else { return }
+            addSeriesVC.seriesController = seriesController
+            
         }
 
+//}
 }
 }
 extension WatchListTableViewController: UITextFieldDelegate {

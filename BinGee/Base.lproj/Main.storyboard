@@ -149,8 +149,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="WatchListTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LgX-TQ-FRP">
-                                <rect key="frame" x="0.0" y="413" width="414" height="449"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WatchListTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LgX-TQ-FRP">
+                                <rect key="frame" x="0.0" y="268" width="414" height="594"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SeriesOnListCell" rowHeight="77" id="I49-0i-LbP" customClass="WatchListTableViewCell" customModule="BinGee" customModuleProvider="target">
@@ -160,14 +160,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnS-dC-qoD">
-                                                    <rect key="frame" x="316" y="12" width="86" height="53"/>
-                                                    <state key="normal" title="View Series"/>
-                                                    <connections>
-                                                        <action selector="viewSeriesButtonTapped:" destination="I49-0i-LbP" eventType="touchUpInside" id="57b-6G-to2"/>
-                                                        <segue destination="wTO-DP-BJz" kind="show" identifier="ViewSeriesShowSegue" id="ZLb-nl-g4J"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTQ-8z-nnX">
                                                     <rect key="frame" x="36" y="15" width="274" height="21"/>
                                                     <constraints>
@@ -186,85 +178,61 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="lnS-dC-qoD" firstAttribute="leading" secondItem="dTQ-8z-nnX" secondAttribute="trailing" constant="6" id="3lb-Ct-A5I"/>
-                                                <constraint firstAttribute="bottom" secondItem="lnS-dC-qoD" secondAttribute="bottom" constant="12" id="JjA-AL-JtP"/>
-                                                <constraint firstItem="lnS-dC-qoD" firstAttribute="top" secondItem="G9G-d8-zdL" secondAttribute="top" constant="12" id="L1W-7s-uDe"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="dTQ-8z-nnX" secondAttribute="bottom" constant="30" id="Lqk-IG-8NE"/>
                                                 <constraint firstItem="dTQ-8z-nnX" firstAttribute="leading" secondItem="G9G-d8-zdL" secondAttribute="leadingMargin" constant="16" id="VrU-ac-DnV"/>
-                                                <constraint firstAttribute="trailing" secondItem="lnS-dC-qoD" secondAttribute="trailing" constant="12" id="qIr-C3-uTg"/>
-                                                <constraint firstItem="lnS-dC-qoD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G9G-d8-zdL" secondAttribute="leading" constant="150" id="xqt-R0-1cR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="seriesEpisodeNumberLabel" destination="0le-OS-I9M" id="VJt-yN-BKB"/>
                                             <outlet property="seriesOnListLabel" destination="dTQ-8z-nnX" id="E5K-ME-pZV"/>
-                                            <outlet property="viewSeriesButton" destination="lnS-dC-qoD" id="wxi-5Z-gdU"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8RN-RB-woR" id="oZ6-Xy-6bX"/>
+                                    <outlet property="delegate" destination="8RN-RB-woR" id="Msp-g4-NcN"/>
+                                </connections>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter series title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="urN-jC-Wri">
                                 <rect key="frame" x="8" y="104" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Season #:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wP-XH-cfR">
-                                <rect key="frame" x="8" y="291" width="398" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Season #:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wP-XH-cfR">
+                                <rect key="frame" x="8" y="146" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter # of episodes in season:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iFG-q7-0Ld">
-                                <rect key="frame" x="8" y="333" width="398" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter # of episodes in season:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iFG-q7-0Ld">
+                                <rect key="frame" x="8" y="188" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNn-K6-mGH">
-                                <rect key="frame" x="162" y="253" width="74" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNn-K6-mGH">
+                                <rect key="frame" x="170" y="230" width="74" height="30"/>
                                 <state key="normal" title="Add Series"/>
                                 <connections>
                                     <action selector="addSeries:" destination="8RN-RB-woR" eventType="touchUpInside" id="tkr-JG-ZwX"/>
+                                    <segue destination="chZ-P8-5i4" kind="show" identifier="AddSeriesModallySegue" id="Evk-23-CEh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIK-ck-c31">
-                                <rect key="frame" x="148" y="375" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Series Info"/>
-                                <connections>
-                                    <action selector="addSeries:" destination="8RN-RB-woR" eventType="touchUpInside" id="V72-ds-0ic"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Finish by date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vP-NA-5le">
-                                <rect key="frame" x="8" y="146" width="138" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" id="Acf-eE-bgW">
-                                <rect key="frame" x="0.0" y="174" width="414" height="71"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="BNn-K6-mGH" firstAttribute="leading" secondItem="zki-g7-y25" secondAttribute="leading" constant="170" id="5r5-OQ-0fB"/>
                             <constraint firstItem="iFG-q7-0Ld" firstAttribute="leading" secondItem="zki-g7-y25" secondAttribute="leading" constant="8" id="7CS-sM-qu9"/>
                             <constraint firstItem="zki-g7-y25" firstAttribute="trailing" secondItem="1wP-XH-cfR" secondAttribute="trailing" constant="8" id="Gto-tQ-9My"/>
                             <constraint firstItem="urN-jC-Wri" firstAttribute="top" secondItem="zki-g7-y25" secondAttribute="top" constant="16" id="HxZ-ak-GbV"/>
                             <constraint firstItem="LgX-TQ-FRP" firstAttribute="bottom" secondItem="zki-g7-y25" secondAttribute="bottom" id="Nen-z2-ub0"/>
-                            <constraint firstItem="LgX-TQ-FRP" firstAttribute="top" secondItem="BNn-K6-mGH" secondAttribute="bottom" constant="8" id="Q1J-2t-D1H"/>
+                            <constraint firstItem="LgX-TQ-FRP" firstAttribute="top" secondItem="BNn-K6-mGH" secondAttribute="bottom" constant="8" id="SZF-EL-bas"/>
+                            <constraint firstItem="BNn-K6-mGH" firstAttribute="leading" secondItem="zki-g7-y25" secondAttribute="leading" constant="170" id="U9n-ew-QQq"/>
                             <constraint firstItem="1wP-XH-cfR" firstAttribute="leading" secondItem="zki-g7-y25" secondAttribute="leading" constant="8" id="Ud7-aN-E8x"/>
                             <constraint firstItem="1wP-XH-cfR" firstAttribute="top" secondItem="urN-jC-Wri" secondAttribute="bottom" constant="8" id="W0K-zr-XTs"/>
-                            <constraint firstItem="LgX-TQ-FRP" firstAttribute="trailing" secondItem="zki-g7-y25" secondAttribute="trailing" id="YW4-sI-0XK"/>
-                            <constraint firstItem="zki-g7-y25" firstAttribute="trailing" secondItem="BNn-K6-mGH" secondAttribute="trailing" constant="170" id="djR-fr-OMm"/>
+                            <constraint firstItem="BNn-K6-mGH" firstAttribute="top" secondItem="iFG-q7-0Ld" secondAttribute="bottom" constant="8" id="WSW-gb-vYT"/>
                             <constraint firstItem="iFG-q7-0Ld" firstAttribute="top" secondItem="1wP-XH-cfR" secondAttribute="bottom" constant="8" id="eOI-bi-4F5"/>
-                            <constraint firstItem="BNn-K6-mGH" firstAttribute="top" secondItem="iFG-q7-0Ld" secondAttribute="bottom" constant="8" id="gAT-RM-z73"/>
                             <constraint firstItem="urN-jC-Wri" firstAttribute="leading" secondItem="zki-g7-y25" secondAttribute="leading" constant="8" id="gqJ-Gh-J3V"/>
-                            <constraint firstItem="LgX-TQ-FRP" firstAttribute="leading" secondItem="zki-g7-y25" secondAttribute="leading" id="hws-V1-n6y"/>
-                            <constraint firstItem="BNn-K6-mGH" firstAttribute="top" secondItem="iFG-q7-0Ld" secondAttribute="bottom" constant="8" id="j7u-Hm-yIL"/>
                             <constraint firstItem="zki-g7-y25" firstAttribute="trailing" secondItem="urN-jC-Wri" secondAttribute="trailing" constant="8" id="jJ6-Vu-dCc"/>
-                            <constraint firstItem="zki-g7-y25" firstAttribute="bottom" secondItem="LgX-TQ-FRP" secondAttribute="bottom" id="o9t-Ka-a8A"/>
                             <constraint firstItem="zki-g7-y25" firstAttribute="trailing" secondItem="LgX-TQ-FRP" secondAttribute="trailing" id="pCJ-Rf-5XR"/>
+                            <constraint firstItem="zki-g7-y25" firstAttribute="trailing" secondItem="BNn-K6-mGH" secondAttribute="trailing" constant="170" id="x0f-3n-3Xj"/>
                             <constraint firstItem="zki-g7-y25" firstAttribute="trailing" secondItem="iFG-q7-0Ld" secondAttribute="trailing" constant="8" id="xbD-gx-7IH"/>
                             <constraint firstItem="LgX-TQ-FRP" firstAttribute="leading" secondItem="zki-g7-y25" secondAttribute="leading" id="zZY-7Q-uuw"/>
                         </constraints>
@@ -280,135 +248,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4AD-Gb-OCZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884.057971014493" y="-917.41071428571422"/>
+            <point key="canvasLocation" x="1874" y="-916"/>
         </scene>
-        <!--View Series View Controller-->
-        <scene sceneID="wmQ-Lw-CTP">
+        <!--Date Picker View Controller-->
+        <scene sceneID="sMB-Z8-UDG">
             <objects>
-                <viewController id="wTO-DP-BJz" customClass="ViewSeriesViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qUb-Tw-CLe">
+                <viewController id="chZ-P8-5i4" customClass="DatePickerViewController" customModule="BinGee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x21-Yq-R7P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Series Title" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tUx-y9-eIp">
-                                <rect key="frame" x="16" y="88" width="382" height="46"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="d6y-eD-oCm"/>
-                                </constraints>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QjR-Rr-bvK">
-                                <rect key="frame" x="0.0" y="171" width="414" height="705"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SeasonNumber" id="Isk-8A-lgM" customClass="ViewSeriesTableViewCell" customModule="BinGee" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="33.333332061767578"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Isk-8A-lgM" id="vu6-E2-gpZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="33.333332061767578"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkS-ze-vhr">
-                                                    <rect key="frame" x="20" y="5.9999999999999982" width="71.333333333333329" height="21.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DaG-SK-8Cs">
-                                                    <rect key="frame" x="359" y="0.99999999999999822" width="51" height="31.333333333333329"/>
-                                                    <connections>
-                                                        <action selector="seasonSeenToggle:" destination="Isk-8A-lgM" eventType="valueChanged" id="LDD-29-y02"/>
-                                                    </connections>
-                                                </switch>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="DaG-SK-8Cs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FkS-ze-vhr" secondAttribute="trailing" constant="8" id="05K-rg-rk8"/>
-                                                <constraint firstItem="FkS-ze-vhr" firstAttribute="leading" secondItem="vu6-E2-gpZ" secondAttribute="leading" constant="20" id="G9j-yk-iYD"/>
-                                                <constraint firstAttribute="bottom" secondItem="FkS-ze-vhr" secondAttribute="bottom" constant="6" id="H7y-Mz-KHY"/>
-                                                <constraint firstItem="DaG-SK-8Cs" firstAttribute="top" secondItem="vu6-E2-gpZ" secondAttribute="top" constant="1" id="UHg-tw-rI3"/>
-                                                <constraint firstItem="FkS-ze-vhr" firstAttribute="top" secondItem="vu6-E2-gpZ" secondAttribute="top" constant="6" id="bNv-r4-M5V"/>
-                                                <constraint firstAttribute="trailing" secondItem="DaG-SK-8Cs" secondAttribute="trailing" constant="6" id="g7j-3E-gv6"/>
-                                                <constraint firstAttribute="bottom" secondItem="DaG-SK-8Cs" secondAttribute="bottom" constant="1" id="tTi-ga-tf3"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="seasonNumberLabel" destination="FkS-ze-vhr" id="jVH-M8-4H8"/>
-                                            <outlet property="seasonNumberToggle" destination="DaG-SK-8Cs" id="Jv9-EH-pAy"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EpisodeNumber" id="hvb-ZT-nvD" customClass="ViewSeriesTableViewCell" customModule="BinGee" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="61.333332061767578" width="414" height="33.333332061767578"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hvb-ZT-nvD" id="f1u-Ud-8NH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="33.333332061767578"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAd-Pr-Fha">
-                                                    <rect key="frame" x="55" y="5.9999999999999982" width="278" height="21.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="01e-6E-7es">
-                                                    <rect key="frame" x="359" y="0.99999999999999822" width="51" height="31.333333333333329"/>
-                                                    <connections>
-                                                        <action selector="episodeSeenToggle:" destination="hvb-ZT-nvD" eventType="valueChanged" id="OJh-NG-vcP"/>
-                                                    </connections>
-                                                </switch>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="01e-6E-7es" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kAd-Pr-Fha" secondAttribute="trailing" constant="26" id="3my-0c-QKy"/>
-                                                <constraint firstAttribute="bottom" secondItem="kAd-Pr-Fha" secondAttribute="bottom" constant="6" id="EbV-zA-hPM"/>
-                                                <constraint firstItem="kAd-Pr-Fha" firstAttribute="leading" secondItem="f1u-Ud-8NH" secondAttribute="leading" constant="55" id="Fhj-X4-G4B"/>
-                                                <constraint firstItem="kAd-Pr-Fha" firstAttribute="top" secondItem="f1u-Ud-8NH" secondAttribute="top" constant="6" id="LND-j2-i6C"/>
-                                                <constraint firstItem="01e-6E-7es" firstAttribute="top" secondItem="f1u-Ud-8NH" secondAttribute="top" constant="1" id="b79-ka-Leu"/>
-                                                <constraint firstAttribute="bottom" secondItem="01e-6E-7es" secondAttribute="bottom" constant="1" id="pT9-jZ-R4o"/>
-                                                <constraint firstItem="01e-6E-7es" firstAttribute="leading" secondItem="kAd-Pr-Fha" secondAttribute="trailing" constant="26" id="q2c-Fo-gHh"/>
-                                                <constraint firstAttribute="trailing" secondItem="01e-6E-7es" secondAttribute="trailing" constant="6" id="zP4-yH-JTp"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="episodeNumberLabel" destination="kAd-Pr-Fha" id="szW-BF-BAd"/>
-                                            <outlet property="episodeNumberToggle" destination="01e-6E-7es" id="Y4w-qy-ICi"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status - seen episode count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dT-Ox-9v7">
-                                <rect key="frame" x="16" y="142" width="216" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="bdL-Xz-Edv">
+                                <rect key="frame" x="0.0" y="227" width="414" height="337"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter date when you'd like to finish \(seriesTitle)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eC0-z7-Eb7">
+                                <rect key="frame" x="20" y="108" width="374" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="1dT-Ox-9v7" firstAttribute="leading" secondItem="NLZ-Tn-Bpq" secondAttribute="leading" constant="16" id="1Kn-ec-ih6"/>
-                            <constraint firstItem="QjR-Rr-bvK" firstAttribute="top" secondItem="1dT-Ox-9v7" secondAttribute="bottom" constant="8" id="CGe-jh-kh0"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="QjR-Rr-bvK" secondAttribute="bottom" constant="20" id="D4f-Ed-8Cr"/>
-                            <constraint firstItem="QjR-Rr-bvK" firstAttribute="leading" secondItem="NLZ-Tn-Bpq" secondAttribute="leading" id="Hm2-R3-q5I"/>
-                            <constraint firstItem="tUx-y9-eIp" firstAttribute="top" secondItem="NLZ-Tn-Bpq" secondAttribute="top" id="JHI-Az-dty"/>
-                            <constraint firstItem="tUx-y9-eIp" firstAttribute="leading" secondItem="NLZ-Tn-Bpq" secondAttribute="leading" constant="16" id="NBq-Vg-Xuj"/>
-                            <constraint firstItem="NLZ-Tn-Bpq" firstAttribute="trailing" secondItem="1dT-Ox-9v7" secondAttribute="trailing" constant="182" id="Pps-Co-VDF"/>
-                            <constraint firstItem="NLZ-Tn-Bpq" firstAttribute="trailing" secondItem="tUx-y9-eIp" secondAttribute="trailing" constant="16" id="m7O-dY-OZb"/>
-                            <constraint firstItem="QjR-Rr-bvK" firstAttribute="trailing" secondItem="NLZ-Tn-Bpq" secondAttribute="trailing" id="rYw-4E-Vgi"/>
-                            <constraint firstItem="1dT-Ox-9v7" firstAttribute="top" secondItem="tUx-y9-eIp" secondAttribute="bottom" constant="8" id="udi-yo-9F3"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="QjR-Rr-bvK" secondAttribute="bottom" constant="-14" id="upa-JY-VKd"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="NLZ-Tn-Bpq"/>
+                        <viewLayoutGuide key="safeArea" id="MH9-Uu-0k7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="e0U-FX-RRK"/>
-                    <connections>
-                        <outlet property="seriesTitleLabel" destination="tUx-y9-eIp" id="SjA-lq-qBI"/>
-                        <outlet property="viewSeriesTableView" destination="QjR-Rr-bvK" id="qY6-Td-MQe"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="QS4-2J-iV2"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j6d-24-Jgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PTR-8o-da6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2642.0289855072465" y="-916.07142857142856"/>
+            <point key="canvasLocation" x="2597" y="-916"/>
         </scene>
         <!--Schedule View Controller-->
         <scene sceneID="5FE-dh-Qmw">
@@ -442,7 +311,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2o-jy-gK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="211.59420289855075" y="-915.48913043478262"/>
+            <point key="canvasLocation" x="351" y="-916"/>
         </scene>
     </scenes>
     <resources>

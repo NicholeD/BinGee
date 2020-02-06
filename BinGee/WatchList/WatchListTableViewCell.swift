@@ -12,12 +12,9 @@ class WatchListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var seriesOnListLabel: UILabel!
     @IBOutlet weak var seriesEpisodeNumberLabel: UILabel!
-    @IBOutlet weak var viewSeriesButton: UIButton!
-    
-    
-
-    var seriesController = SeriesController()
-     var series: [Series] = []
+  
+    var seriesController = SeriesController?.self
+    var series: [Series] = []
     
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
@@ -25,8 +22,7 @@ class WatchListTableViewCell: UITableViewCell {
 //    }
 
     
-    @IBAction func viewSeriesButtonTapped(_ sender: UIButton) {
-    }
+ 
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

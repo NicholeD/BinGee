@@ -16,8 +16,7 @@
 		152544B823E8CDC2009B0312 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544B723E8CDC2009B0312 /* ScheduleViewController.swift */; };
 		152544BD23E8CE62009B0312 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544BC23E8CE62009B0312 /* Series.swift */; };
 		152544C523E91CE7009B0312 /* SeriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544C423E91CE7009B0312 /* SeriesController.swift */; };
-		155ECBC223EC912000DD86FF /* ViewSeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155ECBC123EC912000DD86FF /* ViewSeriesTableViewController.swift */; };
-		155ECBC423EC913900DD86FF /* ViewSeriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155ECBC323EC913900DD86FF /* ViewSeriesTableViewCell.swift */; };
+		156B990323EC9FCE00D6FFC3 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156B990223EC9FCE00D6FFC3 /* DatePickerViewController.swift */; };
 		15C3BC9E23EB7CCF002DF6B9 /* WatchListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C3BC9D23EB7CCF002DF6B9 /* WatchListTableViewController.swift */; };
 		15C3BCA023EB8BB0002DF6B9 /* WatchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C3BC9F23EB8BB0002DF6B9 /* WatchListTableViewCell.swift */; };
 		15FC205A23E9DDE6008AC62A /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC205923E9DDE6008AC62A /* ThemeHelper.swift */; };
@@ -36,8 +35,7 @@
 		152544B723E8CDC2009B0312 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		152544BC23E8CE62009B0312 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		152544C423E91CE7009B0312 /* SeriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesController.swift; sourceTree = "<group>"; };
-		155ECBC123EC912000DD86FF /* ViewSeriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSeriesTableViewController.swift; sourceTree = "<group>"; };
-		155ECBC323EC913900DD86FF /* ViewSeriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSeriesTableViewCell.swift; sourceTree = "<group>"; };
+		156B990223EC9FCE00D6FFC3 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		15C3BC9D23EB7CCF002DF6B9 /* WatchListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTableViewController.swift; sourceTree = "<group>"; };
 		15C3BC9F23EB8BB0002DF6B9 /* WatchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTableViewCell.swift; sourceTree = "<group>"; };
 		15FC205923E9DDE6008AC62A /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 				152544BA23E8CE15009B0312 /* HomePage */,
 				15FC205D23E9DE1F008AC62A /* Settings */,
 				152544BB23E8CE25009B0312 /* WatchList */,
-				155ECBC523EC931500DD86FF /* ViewSeries */,
 				152544B923E8CE06009B0312 /* Schedule */,
 				152544AC23E8B017009B0312 /* Resources */,
 				152544A323E8AFFB009B0312 /* LaunchScreen.storyboard */,
@@ -120,17 +117,9 @@
 			children = (
 				15C3BC9D23EB7CCF002DF6B9 /* WatchListTableViewController.swift */,
 				15C3BC9F23EB8BB0002DF6B9 /* WatchListTableViewCell.swift */,
+				156B990223EC9FCE00D6FFC3 /* DatePickerViewController.swift */,
 			);
 			path = WatchList;
-			sourceTree = "<group>";
-		};
-		155ECBC523EC931500DD86FF /* ViewSeries */ = {
-			isa = PBXGroup;
-			children = (
-				155ECBC123EC912000DD86FF /* ViewSeriesTableViewController.swift */,
-				155ECBC323EC913900DD86FF /* ViewSeriesTableViewCell.swift */,
-			);
-			path = ViewSeries;
 			sourceTree = "<group>";
 		};
 		15FC205D23E9DE1F008AC62A /* Settings */ = {
@@ -218,13 +207,12 @@
 				1525449923E8AFFA009B0312 /* AppDelegate.swift in Sources */,
 				15C3BC9E23EB7CCF002DF6B9 /* WatchListTableViewController.swift in Sources */,
 				1525449B23E8AFFA009B0312 /* SceneDelegate.swift in Sources */,
-				155ECBC423EC913900DD86FF /* ViewSeriesTableViewCell.swift in Sources */,
 				152544BD23E8CE62009B0312 /* Series.swift in Sources */,
+				156B990323EC9FCE00D6FFC3 /* DatePickerViewController.swift in Sources */,
 				152544B823E8CDC2009B0312 /* ScheduleViewController.swift in Sources */,
 				15FC205A23E9DDE6008AC62A /* ThemeHelper.swift in Sources */,
 				152544B023E8B9B4009B0312 /* HomePageViewController.swift in Sources */,
 				15C3BCA023EB8BB0002DF6B9 /* WatchListTableViewCell.swift in Sources */,
-				155ECBC223EC912000DD86FF /* ViewSeriesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
