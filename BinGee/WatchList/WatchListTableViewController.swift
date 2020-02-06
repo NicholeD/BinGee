@@ -91,20 +91,20 @@ class WatchListTableViewController: UITableViewController, SeriesAddedDelegate {
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WatchListShowSegue" {
-            guard let watchListVC = segue.destination as? AddSeriesViewController else { return }
+            guard let watchListVC = segue.destination as? ViewSeriesTableViewController else { return }
             watchListVC.seriesController = seriesController
         }
 
 }
 }
-extension AddSeriesViewController: UITextFieldDelegate {
+extension WatchListTableViewController: UITextFieldDelegate {
 func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     if let text = textField.text,
         !text.isEmpty {
         switch textField {
-        case addSeriesTextField:
+        case enterSeriesTextField:
             textField.resignFirstResponder()
-        case numberOfSeasonsTextField:
+        case enterNumberOfSeasonsTextField:
             textField.resignFirstResponder()
         default:
             textField.resignFirstResponder()

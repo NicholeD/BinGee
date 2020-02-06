@@ -13,19 +13,24 @@ class ViewSeriesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var seasonNumberLabel: UILabel!
     
+    @IBOutlet weak var seasonNumberToggle: UISwitch!
+    
     @IBOutlet weak var episodeNumberLabel: UILabel!
     
+    @IBOutlet weak var episodeNumberToggle: UISwitch!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    @IBAction func seasonSeenToggle(_ sender: Any) {
-      }
-      
-      @IBAction func episodeSeenToggle(_ sender: Any) {
-      }
 
+    @IBAction func seasonSeenToggle(_ sender: Any) {
+    }
+    
+    @IBAction func episodeSeenToggle(_ sender: Any) {
+    }
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

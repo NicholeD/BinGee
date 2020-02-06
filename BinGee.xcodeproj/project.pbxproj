@@ -15,7 +15,6 @@
 		152544B023E8B9B4009B0312 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544AF23E8B9B4009B0312 /* HomePageViewController.swift */; };
 		152544B823E8CDC2009B0312 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544B723E8CDC2009B0312 /* ScheduleViewController.swift */; };
 		152544BD23E8CE62009B0312 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544BC23E8CE62009B0312 /* Series.swift */; };
-		152544BF23E8D343009B0312 /* ViewSeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544BE23E8D343009B0312 /* ViewSeriesViewController.swift */; };
 		152544C523E91CE7009B0312 /* SeriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544C423E91CE7009B0312 /* SeriesController.swift */; };
 		155ECBC223EC912000DD86FF /* ViewSeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155ECBC123EC912000DD86FF /* ViewSeriesTableViewController.swift */; };
 		155ECBC423EC913900DD86FF /* ViewSeriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155ECBC323EC913900DD86FF /* ViewSeriesTableViewCell.swift */; };
@@ -36,7 +35,6 @@
 		152544AF23E8B9B4009B0312 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		152544B723E8CDC2009B0312 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		152544BC23E8CE62009B0312 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
-		152544BE23E8D343009B0312 /* ViewSeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSeriesViewController.swift; sourceTree = "<group>"; };
 		152544C423E91CE7009B0312 /* SeriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesController.swift; sourceTree = "<group>"; };
 		155ECBC123EC912000DD86FF /* ViewSeriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSeriesTableViewController.swift; sourceTree = "<group>"; };
 		155ECBC323EC913900DD86FF /* ViewSeriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSeriesTableViewCell.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 		155ECBC523EC931500DD86FF /* ViewSeries */ = {
 			isa = PBXGroup;
 			children = (
-				152544BE23E8D343009B0312 /* ViewSeriesViewController.swift */,
 				155ECBC123EC912000DD86FF /* ViewSeriesTableViewController.swift */,
 				155ECBC323EC913900DD86FF /* ViewSeriesTableViewCell.swift */,
 			);
@@ -221,7 +218,6 @@
 				1525449923E8AFFA009B0312 /* AppDelegate.swift in Sources */,
 				15C3BC9E23EB7CCF002DF6B9 /* WatchListTableViewController.swift in Sources */,
 				1525449B23E8AFFA009B0312 /* SceneDelegate.swift in Sources */,
-				152544BF23E8D343009B0312 /* ViewSeriesViewController.swift in Sources */,
 				155ECBC423EC913900DD86FF /* ViewSeriesTableViewCell.swift in Sources */,
 				152544BD23E8CE62009B0312 /* Series.swift in Sources */,
 				152544B823E8CDC2009B0312 /* ScheduleViewController.swift in Sources */,

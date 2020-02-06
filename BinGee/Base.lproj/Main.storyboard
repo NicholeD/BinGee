@@ -149,8 +149,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WatchListTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LgX-TQ-FRP">
-                                <rect key="frame" x="0.0" y="268" width="414" height="594"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="WatchListTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LgX-TQ-FRP">
+                                <rect key="frame" x="0.0" y="413" width="414" height="449"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SeriesOnListCell" rowHeight="77" id="I49-0i-LbP" customClass="WatchListTableViewCell" customModule="BinGee" customModuleProvider="target">
@@ -177,8 +177,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Season #, Episode #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0le-OS-I9M">
-                                                    <rect key="frame" x="36" y="45" width="124" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# of Seasons,  total # of Episodes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0le-OS-I9M">
+                                                    <rect key="frame" x="36" y="45" width="203" height="16"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                     <nil key="textColor"/>
@@ -208,23 +208,42 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter number of seasons:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wP-XH-cfR">
-                                <rect key="frame" x="8" y="146" width="398" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Season #:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wP-XH-cfR">
+                                <rect key="frame" x="8" y="291" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter total number of episodes:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iFG-q7-0Ld">
-                                <rect key="frame" x="8" y="188" width="398" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter # of episodes in season:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iFG-q7-0Ld">
+                                <rect key="frame" x="8" y="333" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNn-K6-mGH">
-                                <rect key="frame" x="170" y="230" width="74" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNn-K6-mGH">
+                                <rect key="frame" x="162" y="253" width="74" height="30"/>
                                 <state key="normal" title="Add Series"/>
                                 <connections>
                                     <action selector="addSeries:" destination="8RN-RB-woR" eventType="touchUpInside" id="tkr-JG-ZwX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIK-ck-c31">
+                                <rect key="frame" x="148" y="375" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Series Info"/>
+                                <connections>
+                                    <action selector="addSeries:" destination="8RN-RB-woR" eventType="touchUpInside" id="V72-ds-0ic"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Finish by date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vP-NA-5le">
+                                <rect key="frame" x="8" y="146" width="138" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" id="Acf-eE-bgW">
+                                <rect key="frame" x="0.0" y="174" width="414" height="71"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -261,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4AD-Gb-OCZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1885.0446428571427" y="-917.39130434782612"/>
+            <point key="canvasLocation" x="1884.057971014493" y="-917.41071428571422"/>
         </scene>
         <!--View Series View Controller-->
         <scene sceneID="wmQ-Lw-CTP">
@@ -271,15 +290,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Series Title" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tUx-y9-eIp">
-                                <rect key="frame" x="16" y="84" width="382" height="61"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Series Title" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tUx-y9-eIp">
+                                <rect key="frame" x="16" y="88" width="382" height="46"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="d6y-eD-oCm"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QjR-Rr-bvK">
-                                <rect key="frame" x="0.0" y="139" width="414" height="737"/>
+                                <rect key="frame" x="0.0" y="171" width="414" height="705"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SeasonNumber" id="Isk-8A-lgM" customClass="ViewSeriesTableViewCell" customModule="BinGee" customModuleProvider="target">
@@ -289,8 +311,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="33.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Season #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkS-ze-vhr">
-                                                    <rect key="frame" x="20" y="6" width="313" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkS-ze-vhr">
+                                                    <rect key="frame" x="20" y="5.9999999999999982" width="71.333333333333329" height="21.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -298,8 +320,7 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DaG-SK-8Cs">
                                                     <rect key="frame" x="359" y="0.99999999999999822" width="51" height="31.333333333333329"/>
                                                     <connections>
-                                                        <action selector="seasonSeenToggle:" destination="wTO-DP-BJz" eventType="valueChanged" id="Cep-aq-kFZ"/>
-                                                        <action selector="seasonSeenToggle:" destination="Isk-8A-lgM" eventType="valueChanged" id="H3R-bu-41v"/>
+                                                        <action selector="seasonSeenToggle:" destination="Isk-8A-lgM" eventType="valueChanged" id="LDD-29-y02"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -314,7 +335,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="seasonNumberLabel" destination="FkS-ze-vhr" id="lrH-UW-c7F"/>
+                                            <outlet property="seasonNumberLabel" destination="FkS-ze-vhr" id="jVH-M8-4H8"/>
+                                            <outlet property="seasonNumberToggle" destination="DaG-SK-8Cs" id="Jv9-EH-pAy"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EpisodeNumber" id="hvb-ZT-nvD" customClass="ViewSeriesTableViewCell" customModule="BinGee" customModuleProvider="target">
@@ -333,8 +355,7 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="01e-6E-7es">
                                                     <rect key="frame" x="359" y="0.99999999999999822" width="51" height="31.333333333333329"/>
                                                     <connections>
-                                                        <action selector="episodeSeenToggle:" destination="hvb-ZT-nvD" eventType="valueChanged" id="Dtb-wr-AFe"/>
-                                                        <action selector="episodeSeenToggle:" destination="wTO-DP-BJz" eventType="valueChanged" id="Yn1-NY-0PP"/>
+                                                        <action selector="episodeSeenToggle:" destination="hvb-ZT-nvD" eventType="valueChanged" id="OJh-NG-vcP"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -350,28 +371,37 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="episodeNumberLabel" destination="kAd-Pr-Fha" id="xI1-2Z-agi"/>
+                                            <outlet property="episodeNumberLabel" destination="kAd-Pr-Fha" id="szW-BF-BAd"/>
+                                            <outlet property="episodeNumberToggle" destination="01e-6E-7es" id="Y4w-qy-ICi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status - seen episode count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dT-Ox-9v7">
+                                <rect key="frame" x="16" y="142" width="216" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="tUx-y9-eIp" firstAttribute="leading" secondItem="NLZ-Tn-Bpq" secondAttribute="leading" constant="16" id="87O-FE-VNH"/>
-                            <constraint firstAttribute="bottom" secondItem="QjR-Rr-bvK" secondAttribute="bottom" constant="20" id="D4f-Ed-8Cr"/>
+                            <constraint firstItem="1dT-Ox-9v7" firstAttribute="leading" secondItem="NLZ-Tn-Bpq" secondAttribute="leading" constant="16" id="1Kn-ec-ih6"/>
+                            <constraint firstItem="QjR-Rr-bvK" firstAttribute="top" secondItem="1dT-Ox-9v7" secondAttribute="bottom" constant="8" id="CGe-jh-kh0"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="QjR-Rr-bvK" secondAttribute="bottom" constant="20" id="D4f-Ed-8Cr"/>
                             <constraint firstItem="QjR-Rr-bvK" firstAttribute="leading" secondItem="NLZ-Tn-Bpq" secondAttribute="leading" id="Hm2-R3-q5I"/>
-                            <constraint firstItem="NLZ-Tn-Bpq" firstAttribute="trailing" secondItem="tUx-y9-eIp" secondAttribute="trailing" constant="16" id="MBC-wp-14z"/>
-                            <constraint firstItem="tUx-y9-eIp" firstAttribute="top" secondItem="NLZ-Tn-Bpq" secondAttribute="top" constant="86" id="c33-UM-WUm"/>
+                            <constraint firstItem="tUx-y9-eIp" firstAttribute="top" secondItem="NLZ-Tn-Bpq" secondAttribute="top" id="JHI-Az-dty"/>
+                            <constraint firstItem="tUx-y9-eIp" firstAttribute="leading" secondItem="NLZ-Tn-Bpq" secondAttribute="leading" constant="16" id="NBq-Vg-Xuj"/>
+                            <constraint firstItem="NLZ-Tn-Bpq" firstAttribute="trailing" secondItem="1dT-Ox-9v7" secondAttribute="trailing" constant="182" id="Pps-Co-VDF"/>
+                            <constraint firstItem="NLZ-Tn-Bpq" firstAttribute="trailing" secondItem="tUx-y9-eIp" secondAttribute="trailing" constant="16" id="m7O-dY-OZb"/>
                             <constraint firstItem="QjR-Rr-bvK" firstAttribute="trailing" secondItem="NLZ-Tn-Bpq" secondAttribute="trailing" id="rYw-4E-Vgi"/>
-                            <constraint firstItem="QjR-Rr-bvK" firstAttribute="top" secondItem="NLZ-Tn-Bpq" secondAttribute="top" constant="51" id="tKj-7w-qWz"/>
+                            <constraint firstItem="1dT-Ox-9v7" firstAttribute="top" secondItem="tUx-y9-eIp" secondAttribute="bottom" constant="8" id="udi-yo-9F3"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="QjR-Rr-bvK" secondAttribute="bottom" constant="-14" id="upa-JY-VKd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NLZ-Tn-Bpq"/>
                     </view>
                     <navigationItem key="navigationItem" id="e0U-FX-RRK"/>
                     <connections>
-                        <outlet property="episodeNumberLabel" destination="kAd-Pr-Fha" id="9lC-U5-8Lf"/>
-                        <outlet property="seasonNumberLabel" destination="FkS-ze-vhr" id="f75-mr-rnV"/>
                         <outlet property="seriesTitleLabel" destination="tUx-y9-eIp" id="SjA-lq-qBI"/>
                         <outlet property="viewSeriesTableView" destination="QjR-Rr-bvK" id="qY6-Td-MQe"/>
                     </connections>
