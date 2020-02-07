@@ -8,38 +8,42 @@
 
 import UIKit
 
-class DatePickerViewController: UIViewController {
+class DatePickerViewController: UIViewController, UITableViewDelegate {
+     
 
-    var seriesController: SeriesController?
+    @IBOutlet weak var enterDateMessageLabel: UILabel!
     
+    var seriesController: SeriesController!
+    
+    override func viewDidLoad() {
+         updateViews()
+     }
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var submitDateButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    var series: Series?
     
     func updateViews() {
-        guard datePicker != nil else { return }
-        
+        guard let series = series else { return }
+        enterDateMessageLabel.text = "Please enter a date you would like to finish \(series.title)"
+      
     }
-    
 
     @IBAction func submitDateButtonTapped(_ sender: Any) {
+        guard datePicker != nil else { return }
         
        navigationController?.popViewController(animated: true)
     }
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+            if segue.identifier == "AddSeriesModallySegue" {
+                guard let viewSeriesVC = segue.destination as? WatchListTableViewController else { return }
+             viewSeriesVC.seriesController = seriesController
+            }
+        }
 }
+
+

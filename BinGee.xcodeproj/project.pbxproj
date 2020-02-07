@@ -13,10 +13,11 @@
 		152544A223E8AFFB009B0312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 152544A123E8AFFB009B0312 /* Assets.xcassets */; };
 		152544A523E8AFFB009B0312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 152544A323E8AFFB009B0312 /* LaunchScreen.storyboard */; };
 		152544B023E8B9B4009B0312 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544AF23E8B9B4009B0312 /* HomePageViewController.swift */; };
-		152544B823E8CDC2009B0312 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544B723E8CDC2009B0312 /* ScheduleViewController.swift */; };
 		152544BD23E8CE62009B0312 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544BC23E8CE62009B0312 /* Series.swift */; };
 		152544C523E91CE7009B0312 /* SeriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152544C423E91CE7009B0312 /* SeriesController.swift */; };
 		156B990323EC9FCE00D6FFC3 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156B990223EC9FCE00D6FFC3 /* DatePickerViewController.swift */; };
+		158A098023ECF92600AB4891 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158A097F23ECF92600AB4891 /* ScheduleTableViewController.swift */; };
+		158A098223ECF99500AB4891 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158A098123ECF99500AB4891 /* ScheduleTableViewCell.swift */; };
 		15C3BC9E23EB7CCF002DF6B9 /* WatchListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C3BC9D23EB7CCF002DF6B9 /* WatchListTableViewController.swift */; };
 		15C3BCA023EB8BB0002DF6B9 /* WatchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C3BC9F23EB8BB0002DF6B9 /* WatchListTableViewCell.swift */; };
 		15FC205A23E9DDE6008AC62A /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC205923E9DDE6008AC62A /* ThemeHelper.swift */; };
@@ -32,10 +33,11 @@
 		152544A423E8AFFB009B0312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		152544A623E8AFFB009B0312 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		152544AF23E8B9B4009B0312 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
-		152544B723E8CDC2009B0312 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		152544BC23E8CE62009B0312 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		152544C423E91CE7009B0312 /* SeriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesController.swift; sourceTree = "<group>"; };
 		156B990223EC9FCE00D6FFC3 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		158A097F23ECF92600AB4891 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
+		158A098123ECF99500AB4891 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		15C3BC9D23EB7CCF002DF6B9 /* WatchListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTableViewController.swift; sourceTree = "<group>"; };
 		15C3BC9F23EB8BB0002DF6B9 /* WatchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTableViewCell.swift; sourceTree = "<group>"; };
 		15FC205923E9DDE6008AC62A /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
@@ -99,7 +101,8 @@
 		152544B923E8CE06009B0312 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				152544B723E8CDC2009B0312 /* ScheduleViewController.swift */,
+				158A097F23ECF92600AB4891 /* ScheduleTableViewController.swift */,
+				158A098123ECF99500AB4891 /* ScheduleTableViewCell.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -202,6 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158A098023ECF92600AB4891 /* ScheduleTableViewController.swift in Sources */,
+				158A098223ECF99500AB4891 /* ScheduleTableViewCell.swift in Sources */,
 				152544C523E91CE7009B0312 /* SeriesController.swift in Sources */,
 				15FC205C23E9DE14008AC62A /* ThemeSelectionViewController.swift in Sources */,
 				1525449923E8AFFA009B0312 /* AppDelegate.swift in Sources */,
@@ -209,7 +214,6 @@
 				1525449B23E8AFFA009B0312 /* SceneDelegate.swift in Sources */,
 				152544BD23E8CE62009B0312 /* Series.swift in Sources */,
 				156B990323EC9FCE00D6FFC3 /* DatePickerViewController.swift in Sources */,
-				152544B823E8CDC2009B0312 /* ScheduleViewController.swift in Sources */,
 				15FC205A23E9DDE6008AC62A /* ThemeHelper.swift in Sources */,
 				152544B023E8B9B4009B0312 /* HomePageViewController.swift in Sources */,
 				15C3BCA023EB8BB0002DF6B9 /* WatchListTableViewCell.swift in Sources */,

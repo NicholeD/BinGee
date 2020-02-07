@@ -18,7 +18,7 @@ class SeriesController {
     var series: [Series] = []
     
     func addSeriesTapped(with title: String, seasons: Int, totalEpisodes: Int, scheduleDate: Date) {
-        let seriesName = Series(title: title, seasons: [], totalEpisodes: totalEpisodes, scheduleDate: scheduleDate)
+        let seriesName = Series(title: title, seasons: seasons, totalEpisodes: totalEpisodes, scheduleDate: scheduleDate)
         
         series.append(seriesName)
         
@@ -28,7 +28,7 @@ class SeriesController {
     
     func createSeries(with title: String, seasons: Int, totalEpisodes: Int, scheduleDate: Date) {
 
-           let seriesCreated = Series(title: title, seasons: [], totalEpisodes: totalEpisodes, scheduleDate: scheduleDate)
+           let seriesCreated = Series(title: title, seasons: seasons, totalEpisodes: totalEpisodes, scheduleDate: scheduleDate)
 
            series.append(seriesCreated)
 
