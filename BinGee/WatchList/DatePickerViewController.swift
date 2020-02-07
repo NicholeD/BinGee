@@ -8,30 +8,44 @@
 
 import UIKit
 
-class DatePickerViewController: UIViewController, UITableViewDelegate {
-     
+class DatePickerViewController: UIViewController, UITableViewDelegate, SeriesAddedDelegate {
 
+ 
+    
     @IBOutlet weak var enterDateMessageLabel: UILabel!
+    var seriesController: SeriesController?
     
-    var seriesController: SeriesController!
-    
-    override func viewDidLoad() {
-         updateViews()
-     }
-    
+    var delegate: SeriesAddedDelegate?
+
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var submitDateButton: UIButton!
     
     var series: Series?
     
+    
+     override func viewDidLoad() {
+             updateViews()
+         }
+    
+    func seriesWasAdded(_ series: Series) {
+        
+      }
+    
     func updateViews() {
-        guard let series = series else { return }
-        enterDateMessageLabel.text = "Please enter a date you would like to finish \(series.title)"
-      
+        
+//        guard let series = series else { return }
+        guard let seriesTitle = series?.title else { return }
+        enterDateMessageLabel.text = "Please enter a date you would like to finish \(seriesTitle)"
+    }
+    
+    @IBAction func datePickerAssigned(_ sender: Any) {
+        guard let dateChosen = datePicker?.date else { return }
+        
+       series?.scheduleDate = dateChosen
     }
 
     @IBAction func submitDateButtonTapped(_ sender: Any) {
-        guard datePicker != nil else { return }
+//        guard datePicker != nil else { return }
         
        navigationController?.popViewController(animated: true)
     }
@@ -41,9 +55,9 @@ class DatePickerViewController: UIViewController, UITableViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "AddSeriesModallySegue" {
                 guard let viewSeriesVC = segue.destination as? WatchListTableViewController else { return }
-             viewSeriesVC.seriesController = seriesController
-            }
+                viewSeriesVC.seriesController = seriesController
         }
+    }
 }
 
 

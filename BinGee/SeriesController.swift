@@ -73,11 +73,7 @@ class SeriesController {
                 self.series = decodedSeries
             } catch {
                 print("Error decoding series: \(error)")
-            }
-
         }
-   
-
-//     need to create a deleteSeries func and updateHasBeenSeen func ???
+    }
 }
 

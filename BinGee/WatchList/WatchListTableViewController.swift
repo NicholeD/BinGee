@@ -22,10 +22,9 @@ class WatchListTableViewController: UIViewController, UITableViewDelegate, UITab
     var seriesController: SeriesController?
     var series: Series?
     
-     var delegate: SeriesAddedDelegate?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        addSeries(_: Series.self)
     }
     
     @IBAction func addSeries(_ sender: Any){
@@ -43,15 +42,15 @@ class WatchListTableViewController: UIViewController, UITableViewDelegate, UITab
         if let addSeries = enterSeriesTextField.text,
             !addSeries.isEmpty {
             series.title.append(addSeries)
+            dismiss(animated: true, completion: nil)
+            watchListTableView.reloadData()
         }
-        delegate?.seriesWasAdded(series)
       }
     
     func seriesWasAdded(_ series: Series) {
            addSeries(series)
        }
-    
-          
+ 
        // MARK: - Table view data source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,7 +73,7 @@ class WatchListTableViewController: UIViewController, UITableViewDelegate, UITab
         if segue.identifier == "AddSeriesModallySegue" {
             guard let addSeriesVC = segue.destination as? DatePickerViewController else { return }
             addSeriesVC.seriesController = seriesController
-            
+            addSeriesVC.delegate = self
       }
    }
 }
